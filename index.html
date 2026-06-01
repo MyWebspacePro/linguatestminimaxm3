@@ -3,20 +3,22 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Lingua Mundi — Moderne Sprachschule. Lerne Englisch, Spanisch, Französisch, Italienisch und mehr mit muttersprachlichen Lehrkräften. Online & vor Ort." />
-<title>Lingua Mundi — Sprachen lernen, die dich weiterbringen</title>
+<meta name="description" content="Parole — Sprachschule mit Wärme. Lerne Sprachen in echten Momenten: beim Bestellen, im Café, beim Reisen. Muttersprachliche Lehrkräfte, kleine Gruppen, persönlicher Plan." />
+<title>Parole — Sprachschule, die nach Urlaub schmeckt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  /* ---------- Reset & Base ---------- */
+  /* ===== Reset & Tokens ===== */
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #0f172a;
-    background: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
   img, svg { display: block; max-width: 100%; }
@@ -24,26 +26,27 @@
   button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
   :root {
-    --primary: #4f46e5;
-    --primary-dark: #4338ca;
-    --primary-light: #eef2ff;
-    --accent: #f97066;
-    --accent-dark: #ef4444;
-    --ink: #0f172a;
-    --ink-soft: #475569;
-    --ink-muted: #94a3b8;
-    --line: #e2e8f0;
-    --line-soft: #f1f5f9;
-    --bg: #ffffff;
-    --bg-soft: #fafaf7;
-    --bg-warm: #fdf6f0;
-    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
-    --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
-    --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.10), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
-    --shadow-xl: 0 25px 50px -12px rgba(15, 23, 42, 0.20);
+    --bg: #FAF6EE;
+    --bg-soft: #F2EBDA;
+    --bg-warm: #F5E6D3;
+    --ink: #1F1813;
+    --ink-soft: #5A4A3C;
+    --ink-muted: #8C7C6B;
+    --line: #E5DCC8;
+    --line-soft: #EFE7D6;
+    --primary: #8B2C2C;
+    --primary-dark: #6B1F1F;
+    --primary-light: #F4D8D8;
+    --accent: #E5A23B;
+    --accent-2: #6F8A3E;
+    --accent-3: #3A6B7C;
+    --shadow-sm: 0 1px 2px rgba(31, 24, 19, 0.06);
+    --shadow-md: 0 6px 18px -6px rgba(31, 24, 19, 0.12), 0 2px 4px -2px rgba(31, 24, 19, 0.06);
+    --shadow-lg: 0 20px 40px -10px rgba(31, 24, 19, 0.18);
+    --shadow-warm: 0 14px 30px -10px rgba(139, 44, 44, 0.25);
     --radius-sm: 8px;
-    --radius-md: 14px;
-    --radius-lg: 22px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
     --radius-xl: 32px;
     --container: 1200px;
   }
@@ -52,137 +55,129 @@
     width: 100%;
     max-width: var(--container);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 28px;
   }
 
-  /* ---------- Typography ---------- */
   h1, h2, h3, h4 {
-    font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
-    font-weight: 600;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
     letter-spacing: -0.02em;
-    line-height: 1.1;
+    line-height: 1.05;
     margin: 0;
+    font-variation-settings: "opsz" 80;
   }
-  h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
-  h2 { font-size: clamp(2rem, 4vw, 3rem); }
-  h3 { font-size: 1.35rem; font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); }
+  h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); }
+  h3 { font-size: 1.5rem; }
   p { margin: 0; }
+  .hand { font-family: 'Caveat', cursive; font-weight: 600; }
 
   .eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: var(--primary);
-    background: var(--primary-light);
-    padding: 6px 14px;
-    border-radius: 100px;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .eyebrow::before {
-    content: "";
-    width: 6px; height: 6px;
-    background: var(--primary);
-    border-radius: 50%;
+    letter-spacing: 0.15em;
+    padding: 6px 0;
+    border-top: 1.5px solid var(--primary);
+    border-bottom: 1.5px solid var(--primary);
   }
 
-  .gradient-text {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+  .stamp {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    color: var(--primary);
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transform: rotate(-3deg);
+    letter-spacing: 0.02em;
+    background: rgba(244, 216, 216, 0.4);
   }
 
-  /* ---------- Buttons ---------- */
+  /* ===== Buttons ===== */
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 14px 24px;
+    gap: 10px;
+    padding: 16px 28px;
     border-radius: 100px;
     font-weight: 500;
-    font-size: 0.95rem;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.98rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
   }
   .btn-primary {
-    background: var(--ink);
-    color: white;
-    box-shadow: var(--shadow-md);
+    background: var(--primary);
+    color: #FAF6EE;
+    box-shadow: var(--shadow-warm);
   }
   .btn-primary:hover {
-    background: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    background: var(--primary-dark);
+    transform: translateY(-2px) rotate(-1deg);
+    box-shadow: 0 18px 36px -10px rgba(139, 44, 44, 0.4);
   }
-  .btn-accent {
-    background: var(--accent);
-    color: white;
-    box-shadow: 0 4px 14px rgba(249, 112, 102, 0.4);
+  .btn-dark {
+    background: var(--ink);
+    color: #FAF6EE;
   }
-  .btn-accent:hover {
-    background: var(--accent-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(249, 112, 102, 0.5);
-  }
+  .btn-dark:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
   .btn-ghost {
     color: var(--ink);
-    border: 1px solid var(--line);
-    background: white;
+    border: 1.5px solid var(--ink);
+    background: transparent;
   }
-  .btn-ghost:hover {
-    border-color: var(--ink);
-    background: var(--bg-soft);
-  }
-  .btn .arrow { transition: transform 0.2s ease; }
-  .btn:hover .arrow { transform: translateX(3px); }
+  .btn-ghost:hover { background: var(--ink); color: var(--bg); }
+  .btn .arrow { transition: transform 0.25s; display: inline-block; }
+  .btn:hover .arrow { transform: translateX(4px); }
 
-  /* ---------- Navigation ---------- */
+  /* ===== Nav ===== */
   .nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: saturate(180%) blur(16px);
-    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    background: rgba(250, 246, 238, 0.85);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
     border-bottom: 1px solid transparent;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: border-color 0.2s, background 0.2s;
   }
-  .nav.scrolled { border-bottom-color: var(--line); box-shadow: var(--shadow-sm); }
+  .nav.scrolled {
+    border-bottom-color: var(--line);
+    background: rgba(250, 246, 238, 0.95);
+  }
   .nav-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
+    height: 76px;
   }
   .logo {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 1.4rem;
+    align-items: baseline;
+    gap: 6px;
+    font-family: 'Fraunces', serif;
+    font-size: 1.7rem;
     font-weight: 600;
     letter-spacing: -0.02em;
   }
-  .logo-mark {
-    width: 32px; height: 32px;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 700;
-    font-size: 1rem;
-    font-family: 'Inter', sans-serif;
+  .logo .dot {
+    width: 10px; height: 10px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 2px;
+    align-self: center;
   }
   .nav-links {
     display: flex;
-    gap: 32px;
+    gap: 36px;
     list-style: none;
     margin: 0; padding: 0;
   }
@@ -190,468 +185,598 @@
     font-size: 0.95rem;
     color: var(--ink-soft);
     font-weight: 500;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--ink); }
-  .nav-cta { display: flex; gap: 12px; align-items: center; }
-  .nav-cta .login { font-size: 0.95rem; color: var(--ink-soft); font-weight: 500; padding: 8px 4px; }
-  .nav-cta .login:hover { color: var(--ink); }
-  .nav-toggle {
-    display: none;
-    width: 40px; height: 40px;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: center;
-  }
-  .nav-toggle span {
-    display: block; width: 22px; height: 2px;
-    background: var(--ink);
-    border-radius: 2px;
     position: relative;
+    padding: 4px 0;
   }
-  .nav-toggle span::before, .nav-toggle span::after {
-    content: ""; position: absolute; left: 0; width: 22px; height: 2px;
-    background: var(--ink); border-radius: 2px;
-  }
-  .nav-toggle span::before { top: -7px; }
-  .nav-toggle span::after { top: 7px; }
-  .nav.open .nav-toggle span { background: transparent; }
-  .nav.open .nav-toggle span::before { transform: rotate(45deg); top: 0; }
-  .nav.open .nav-toggle span::after { transform: rotate(-45deg); top: 0; }
-
-  /* ---------- Hero ---------- */
-  .hero {
-    position: relative;
-    padding: 80px 0 100px;
-    overflow: hidden;
-    background:
-      radial-gradient(ellipse 80% 60% at 80% 0%, rgba(249, 112, 102, 0.08), transparent 60%),
-      radial-gradient(ellipse 70% 50% at 0% 100%, rgba(79, 70, 229, 0.08), transparent 60%),
-      #ffffff;
-  }
-  .hero::before, .hero::after {
+  .nav-links a::after {
     content: "";
     position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.4;
-    pointer-events: none;
+    bottom: -2px; left: 50%;
+    width: 0; height: 2px;
+    background: var(--primary);
+    transition: all 0.25s;
+    transform: translateX(-50%);
+  }
+  .nav-links a:hover { color: var(--primary); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { display: flex; gap: 14px; align-items: center; }
+  .nav-cta .login {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .nav-toggle { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; }
+  .nav-toggle span {
+    display: block; width: 24px; height: 2px;
+    background: var(--ink); position: relative;
+    transition: background 0.2s;
+  }
+  .nav-toggle span::before, .nav-toggle span::after {
+    content: ""; position: absolute; left: 0; width: 24px; height: 2px;
+    background: var(--ink); transition: transform 0.25s;
+  }
+  .nav-toggle span::before { top: -8px; }
+  .nav-toggle span::after { top: 8px; }
+  .nav.open .nav-toggle span { background: transparent; }
+  .nav.open .nav-toggle span::before { transform: rotate(45deg) translate(5px, 5px); }
+  .nav.open .nav-toggle span::after { transform: rotate(-45deg) translate(5px, -5px); }
+
+  /* ===== Hero ===== */
+  .hero {
+    position: relative;
+    padding: 60px 0 120px;
+    overflow: hidden;
   }
   .hero::before {
-    width: 400px; height: 400px;
-    background: linear-gradient(135deg, #a5b4fc, #c4b5fd);
-    top: -100px; right: -100px;
+    content: "";
+    position: absolute;
+    top: -100px; right: -150px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(229, 162, 59, 0.18), transparent 65%);
+    z-index: 0;
   }
   .hero::after {
-    width: 300px; height: 300px;
-    background: linear-gradient(135deg, #fecaca, #fed7aa);
-    bottom: -100px; left: 10%;
+    content: "";
+    position: absolute;
+    bottom: -150px; left: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(139, 44, 44, 0.12), transparent 65%);
+    z-index: 0;
   }
   .hero-grid {
     position: relative;
+    z-index: 1;
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.15fr 0.85fr;
     gap: 60px;
     align-items: center;
   }
   .hero h1 {
-    margin: 20px 0 24px;
+    margin: 28px 0 28px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--primary);
+    font-variation-settings: "opsz" 120;
   }
   .hero-sub {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: var(--ink-soft);
     max-width: 540px;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
+  }
+  .hero-annotation {
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    color: var(--primary);
+    transform: rotate(-2deg);
+    display: inline-block;
+    margin-bottom: 32px;
   }
   .hero-cta {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
+    align-items: center;
   }
-  .hero-stats {
+  .hero-trust {
+    margin-top: 56px;
     display: flex;
-    gap: 36px;
-    margin-top: 48px;
+    gap: 40px;
     flex-wrap: wrap;
+    align-items: center;
   }
-  .hero-stat strong {
-    display: block;
+  .hero-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-trust-item .num {
     font-family: 'Fraunces', serif;
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--ink);
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--primary);
     line-height: 1;
   }
-  .hero-stat span {
-    font-size: 0.9rem;
+  .hero-trust-item .lbl {
+    font-size: 0.88rem;
     color: var(--ink-soft);
+    line-height: 1.3;
   }
 
-  /* Hero visual */
-  .hero-visual {
+  /* Hero — Live chat */
+  .hero-chat {
     position: relative;
-    height: 520px;
-  }
-  .hero-card {
-    position: absolute;
-    background: white;
+    background: #FFFCF5;
+    border: 1.5px solid var(--line);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    padding: 18px 20px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .hero-card:hover { transform: translateY(-4px); }
-  .hero-card-main {
-    width: 320px;
-    top: 30px;
-    right: 0;
-    background: linear-gradient(160deg, var(--primary), #6366f1);
-    color: white;
     padding: 28px;
+    box-shadow: var(--shadow-lg);
+    transform: rotate(1.5deg);
+    max-width: 460px;
+    margin-left: auto;
   }
-  .hero-card-main .label {
-    font-size: 0.8rem;
-    opacity: 0.85;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 8px;
+  .hero-chat::before {
+    content: "";
+    position: absolute;
+    top: -12px; right: 30px;
+    width: 70px; height: 22px;
+    background: rgba(229, 162, 59, 0.5);
+    transform: rotate(-4deg);
+    border-radius: 2px;
   }
-  .hero-card-main .lang {
-    font-family: 'Fraunces', serif;
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-  .hero-card-main .desc {
-    font-size: 0.95rem;
-    opacity: 0.9;
-    margin-bottom: 20px;
-  }
-  .hero-card-main .progress {
-    background: rgba(255,255,255,0.2);
-    height: 6px;
-    border-radius: 100px;
-    overflow: hidden;
-    margin-bottom: 8px;
-  }
-  .hero-card-main .progress-fill {
-    height: 100%;
-    background: white;
-    width: 68%;
-    border-radius: 100px;
-  }
-  .hero-card-main .meta {
-    display: flex; justify-content: space-between;
-    font-size: 0.85rem;
-    opacity: 0.85;
-  }
-
-  .hero-card-flag {
-    width: 130px;
-    bottom: 60px;
-    left: 20px;
-    padding: 16px;
-    text-align: center;
-  }
-  .hero-card-flag .flag {
-    font-size: 2.5rem;
-    margin-bottom: 4px;
-  }
-  .hero-card-flag .name {
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-  .hero-card-flag .level {
-    font-size: 0.8rem;
-    color: var(--ink-soft);
-  }
-
-  .hero-card-rating {
-    width: 220px;
-    bottom: 20px;
-    right: 30px;
-    padding: 16px 18px;
+  .chat-header {
     display: flex;
     align-items: center;
     gap: 12px;
+    padding-bottom: 16px;
+    margin-bottom: 18px;
+    border-bottom: 1.5px dashed var(--line);
   }
-  .hero-card-rating .avatars {
-    display: flex;
-  }
-  .hero-card-rating .avatars > div {
-    width: 32px; height: 32px;
+  .chat-avatars { display: flex; }
+  .chat-avatars > div {
+    width: 36px; height: 36px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2.5px solid #FFFCF5;
     margin-left: -8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.85rem;
-    font-weight: 600;
     color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
   }
-  .hero-card-rating .avatars > div:first-child { margin-left: 0; }
-  .hero-card-rating .a1 { background: #f97066; }
-  .hero-card-rating .a2 { background: #4f46e5; }
-  .hero-card-rating .a3 { background: #f59e0b; }
-  .hero-card-rating .a4 { background: #10b981; }
-  .hero-card-rating .stars { color: #f59e0b; font-size: 0.9rem; line-height: 1; margin-bottom: 2px; }
-  .hero-card-rating .text { font-size: 0.85rem; color: var(--ink-soft); }
-  .hero-card-rating .text strong { color: var(--ink); display: block; font-size: 0.95rem; }
-
-  .hero-card-bubble {
-    width: 80px; height: 80px;
-    top: 0; left: 50px;
-    background: white;
-    border-radius: 50%;
+  .chat-avatars > div:first-child { margin-left: 0; }
+  .chat-avatars .c1 { background: var(--primary); }
+  .chat-avatars .c2 { background: var(--accent-3); }
+  .chat-meta strong { display: block; font-size: 0.95rem; }
+  .chat-meta span {
+    font-size: 0.8rem;
+    color: var(--accent-2);
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    box-shadow: var(--shadow-md);
-    animation: float 4s ease-in-out infinite;
+    gap: 4px;
+  }
+  .chat-meta span::before {
+    content: ""; width: 7px; height: 7px;
+    background: var(--accent-2); border-radius: 50%;
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .bubble {
+    padding: 12px 16px;
+    border-radius: 18px;
+    margin-bottom: 12px;
+    max-width: 85%;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    position: relative;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: bubbleIn 0.5s forwards;
+  }
+  .bubble.them {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    border-bottom-left-radius: 4px;
+    margin-right: auto;
+  }
+  .bubble.you {
+    background: var(--ink);
+    color: var(--bg);
+    border-bottom-right-radius: 4px;
+    margin-left: auto;
+    text-align: right;
+  }
+  .bubble .label {
+    font-family: 'Caveat', cursive;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .bubble.translation {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    font-style: italic;
+    margin-top: 4px;
+    display: block;
+  }
+  .bubble.you .translation { color: rgba(250,246,238,0.65); }
+  .bubble:nth-child(2) { animation-delay: 0.3s; }
+  .bubble:nth-child(3) { animation-delay: 1.2s; }
+  .bubble:nth-child(4) { animation-delay: 2.2s; }
+  .bubble:nth-child(5) { animation-delay: 3.2s; }
+  .bubble:nth-child(6) { animation-delay: 4.2s; }
+  .bubble:nth-child(7) { animation-delay: 5.2s; }
+  @keyframes bubbleIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .typing {
+    display: inline-flex;
+    gap: 4px;
+    padding: 14px 16px;
+    background: var(--primary-light);
+    border-radius: 18px;
+    border-bottom-left-radius: 4px;
+    margin-bottom: 12px;
+  }
+  .typing span {
+    width: 7px; height: 7px;
+    background: var(--primary);
+    border-radius: 50%;
+    animation: typing 1.2s ease-in-out infinite;
+  }
+  .typing span:nth-child(2) { animation-delay: 0.15s; }
+  .typing span:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes typing {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-6px); opacity: 1; }
+  }
+
+  /* Floating stickers around hero */
+  .floating {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .floating-1 {
+    top: 20px; left: 8%;
+    font-family: 'Caveat', cursive;
+    color: var(--accent-2);
+    font-size: 1.3rem;
+    transform: rotate(-8deg);
+    animation: float 5s ease-in-out infinite;
+  }
+  .floating-2 {
+    bottom: 60px; left: 0;
+    transform: rotate(-12deg);
+    animation: float 6s ease-in-out infinite 0.5s;
+  }
+  .floating-3 {
+    top: 50%; right: -10px;
+    transform: rotate(8deg);
+    animation: float 4.5s ease-in-out infinite 1s;
   }
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
+    0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+    50% { transform: translateY(-14px) rotate(var(--r, 0deg)); }
   }
+  .floating-1 { --r: -8deg; }
+  .floating-2 { --r: -12deg; }
+  .floating-3 { --r: 8deg; }
 
-  /* ---------- Sections ---------- */
-  section { padding: 100px 0; }
-  .section-head { text-align: center; max-width: 700px; margin: 0 auto 64px; }
-  .section-head h2 { margin: 16px 0 16px; }
-  .section-head p { font-size: 1.1rem; color: var(--ink-soft); }
+  /* ===== Sections ===== */
+  section { padding: 110px 0; position: relative; }
+  .section-head { max-width: 720px; margin: 0 auto 70px; text-align: center; }
+  .section-head.left { text-align: left; margin-left: 0; }
+  .section-head h2 { margin: 18px 0 18px; }
+  .section-head h2 em { font-style: italic; color: var(--primary); }
+  .section-head p { font-size: 1.12rem; color: var(--ink-soft); }
 
-  /* ---------- Languages ---------- */
-  .langs { background: var(--bg-soft); }
-  .lang-grid {
+  /* ===== "Momente" section — asymmetric grid ===== */
+  .moments { background: var(--bg); }
+  .moments-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(180px, auto);
+    gap: 18px;
   }
-  .lang-tile {
-    background: white;
-    border: 1px solid var(--line);
+  .moment {
+    background: var(--bg-soft);
     border-radius: var(--radius-md);
-    padding: 28px 20px;
-    text-align: center;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
   }
-  .lang-tile:hover {
-    transform: translateY(-4px);
-    border-color: var(--primary);
-    box-shadow: var(--shadow-lg);
+  .moment:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .moment .lang-tag {
+    position: absolute;
+    top: 18px; right: 18px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem;
+    color: var(--primary);
   }
-  .lang-tile .flag-big {
-    font-size: 3rem;
-    margin-bottom: 12px;
+  .moment .phrase {
+    font-family: 'Fraunces', serif;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin: 32px 0 12px;
+    color: var(--ink);
+  }
+  .moment .phrase em { color: var(--primary); font-style: italic; }
+  .moment .meaning {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+  .moment .pronounce {
+    font-family: 'Caveat', cursive;
+    font-size: 1rem;
+    color: var(--accent-2);
+  }
+  .moment .context {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+  }
+
+  /* Asymmetric placement */
+  .m-1 { grid-column: span 3; grid-row: span 2; background: var(--bg-warm); }
+  .m-1 .phrase { font-size: 2.4rem; }
+  .m-2 { grid-column: span 3; }
+  .m-3 { grid-column: span 2; }
+  .m-4 { grid-column: span 2; }
+  .m-5 { grid-column: span 2; background: var(--primary); color: var(--bg); }
+  .m-5 .phrase, .m-5 .meaning, .m-5 .pronounce { color: var(--bg); }
+  .m-5 .phrase em { color: var(--accent); }
+  .m-5 .lang-tag { color: var(--accent); }
+  .m-5 .context { color: rgba(250,246,238,0.6); border-color: rgba(250,246,238,0.2); }
+  .m-6 { grid-column: span 2; }
+  .m-7 { grid-column: span 2; }
+
+  /* ===== "How a lesson feels" — narrative section ===== */
+  .how {
+    background: var(--bg-soft);
+    overflow: hidden;
+  }
+  .how-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .how-left h2 { margin-bottom: 24px; }
+  .how-left p { font-size: 1.1rem; color: var(--ink-soft); margin-bottom: 32px; }
+  .lesson-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .lesson-step {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .lesson-step .num {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+    color: var(--primary);
     line-height: 1;
+    min-width: 40px;
   }
-  .lang-tile .lang-name {
+  .lesson-step h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 4px;
   }
-  .lang-tile .lang-students {
+  .lesson-step p { color: var(--ink-soft); font-size: 0.97rem; }
+
+  /* Right side: a "lesson notebook" */
+  .notebook {
+    background: #FFFCF5;
+    border-radius: var(--radius-md);
+    padding: 40px 36px;
+    box-shadow: var(--shadow-lg);
+    border: 1.5px solid var(--line);
+    position: relative;
+    transform: rotate(-1.5deg);
+  }
+  .notebook::before {
+    content: "";
+    position: absolute;
+    top: 16px; left: 16px; right: 16px; bottom: 16px;
+    border: 1.5px dashed var(--line);
+    border-radius: 12px;
+    pointer-events: none;
+  }
+  .notebook-title {
+    font-family: 'Caveat', cursive;
+    font-size: 1.7rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+  .notebook-sub {
     font-size: 0.85rem;
     color: var(--ink-muted);
+    margin-bottom: 24px;
   }
-
-  /* ---------- Features ---------- */
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
-  .feature {
-    padding: 32px;
-    border-radius: var(--radius-lg);
-    background: white;
-    border: 1px solid var(--line);
-    transition: all 0.25s;
-  }
-  .feature:hover {
-    border-color: transparent;
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
-  }
-  .feature-icon {
-    width: 48px; height: 48px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-  .feature h3 { margin-bottom: 8px; }
-  .feature p { color: var(--ink-soft); font-size: 0.95rem; }
-  .ic-1 { background: #fef3c7; }
-  .ic-2 { background: #dbeafe; }
-  .ic-3 { background: #fce7f3; }
-  .ic-4 { background: #d1fae5; }
-  .ic-5 { background: #ede9fe; }
-  .ic-6 { background: #fed7aa; }
-
-  /* ---------- How it works ---------- */
-  .how { background: var(--bg-soft); }
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    position: relative;
-  }
-  .step {
-    text-align: center;
-    position: relative;
-    padding: 0 8px;
-  }
-  .step-num {
-    width: 56px; height: 56px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    background: var(--ink);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Fraunces', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    position: relative;
-    z-index: 1;
-  }
-  .step h3 { margin-bottom: 8px; }
-  .step p { color: var(--ink-soft); font-size: 0.95rem; }
-
-  /* ---------- Courses ---------- */
-  .courses-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  .course {
-    background: white;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    padding: 32px;
+  .notebook-dialog {
     display: flex;
     flex-direction: column;
-    transition: all 0.25s;
-    position: relative;
+    gap: 14px;
   }
-  .course:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-    border-color: transparent;
-  }
-  .course.featured {
-    background: var(--ink);
-    color: white;
-    border-color: var(--ink);
-  }
-  .course.featured h3, .course.featured .price-num { color: white; }
-  .course.featured .price span,
-  .course.featured .course-features li { color: rgba(255,255,255,0.75); }
-  .course.featured .course-features li::before { background: var(--accent); }
-  .course-badge {
-    position: absolute;
-    top: -12px; right: 24px;
-    background: var(--accent);
-    color: white;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 100px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .course h3 { margin-bottom: 8px; }
-  .course-desc { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 24px; }
-  .course.featured .course-desc { color: rgba(255,255,255,0.75); }
-  .price {
+  .n-line {
     display: flex;
-    align-items: baseline;
-    gap: 4px;
-    margin-bottom: 24px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--line);
+    gap: 12px;
+    align-items: flex-start;
   }
-  .course.featured .price { border-bottom-color: rgba(255,255,255,0.15); }
+  .n-line .who {
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem;
+    color: var(--accent-2);
+    min-width: 64px;
+    font-weight: 600;
+  }
+  .n-line .text {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  .n-line .text em { color: var(--primary); font-style: italic; }
+  .n-line .note {
+    display: block;
+    font-family: 'Caveat', cursive;
+    font-size: 0.95rem;
+    color: var(--accent);
+    margin-top: 2px;
+  }
+  .notebook-footer {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1.5px dashed var(--line);
+    font-family: 'Caveat', cursive;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  /* ===== Formats section — 3 different cards ===== */
+  .formats-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 22px;
+    align-items: stretch;
+  }
+  .format {
+    background: var(--bg-soft);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+    position: relative;
+    transition: all 0.3s;
+    border: 1.5px solid transparent;
+    display: flex;
+    flex-direction: column;
+  }
+  .format:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .format-tall { background: var(--primary); color: var(--bg); }
+  .format-tall h3, .format-tall .price-num { color: var(--bg); }
+  .format-tall .price span, .format-tall .format-features li { color: rgba(250,246,238,0.75); }
+  .format-tall .format-features li::before { background: var(--accent); }
+  .format-tall .stamp { color: var(--bg); border-color: var(--bg); background: rgba(250,246,238,0.1); }
+
+  .format .badge {
+    position: absolute;
+    top: -14px; right: 24px;
+  }
+  .format h3 { margin-bottom: 10px; }
+  .format-desc { font-size: 0.97rem; margin-bottom: 24px; color: var(--ink-soft); }
+  .format-tall .format-desc { color: rgba(250,246,238,0.8); }
+  .format .price {
+    display: flex; align-items: baseline; gap: 4px;
+    padding-bottom: 22px; margin-bottom: 22px;
+    border-bottom: 1.5px dashed var(--line);
+  }
+  .format-tall .price { border-bottom-color: rgba(250,246,238,0.2); }
   .price-num {
     font-family: 'Fraunces', serif;
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--ink);
+    font-size: 2.4rem;
+    font-weight: 500;
     line-height: 1;
   }
-  .price span { color: var(--ink-soft); font-size: 0.95rem; }
-  .course-features {
-    list-style: none;
-    margin: 0 0 28px;
-    padding: 0;
-    flex: 1;
+  .price span { font-size: 0.95rem; color: var(--ink-soft); }
+  .format-features {
+    list-style: none; margin: 0 0 28px; padding: 0; flex: 1;
   }
-  .course-features li {
+  .format-features li {
     padding: 6px 0 6px 24px;
     position: relative;
     font-size: 0.95rem;
     color: var(--ink-soft);
   }
-  .course-features li::before {
-    content: "";
-    position: absolute;
-    left: 0; top: 13px;
-    width: 12px; height: 12px;
+  .format-features li::before {
+    content: ""; position: absolute; left: 0; top: 14px;
+    width: 8px; height: 8px;
+    background: var(--primary);
     border-radius: 50%;
-    background: var(--primary-light);
   }
-  .course-features li::after {
-    content: "✓";
-    position: absolute;
-    left: 2px; top: 8px;
-    color: var(--primary);
-    font-size: 0.7rem;
-    font-weight: 700;
-  }
-  .course .btn { width: 100%; }
+  .format .btn { width: 100%; }
 
-  /* ---------- Testimonials ---------- */
-  .testimonials { background: var(--bg-soft); }
-  .testi-grid {
+  /* ===== Voices — testimonial postcards ===== */
+  .voices { background: var(--bg-soft); position: relative; }
+  .voices::before {
+    content: "✦  ✦  ✦";
+    position: absolute;
+    top: 60px; left: 0; right: 0;
+    text-align: center;
+    color: var(--accent);
+    letter-spacing: 1.2em;
+    font-size: 0.9rem;
+  }
+  .voices-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 28px;
   }
-  .testi {
-    background: white;
-    border-radius: var(--radius-lg);
-    padding: 32px;
-    border: 1px solid var(--line);
+  .postcard {
+    background: #FFFCF5;
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    box-shadow: var(--shadow-md);
     position: relative;
+    border: 1.5px solid var(--line);
+    transition: transform 0.3s;
   }
-  .testi::before {
-    content: "“";
+  .postcard:hover { transform: translateY(-4px) rotate(-0.5deg); }
+  .postcard:nth-child(1) { transform: rotate(-1.5deg); }
+  .postcard:nth-child(2) { transform: rotate(1deg); }
+  .postcard:nth-child(3) { transform: rotate(-0.5deg); }
+  .postcard:nth-child(1):hover { transform: translateY(-4px) rotate(-1.5deg); }
+  .postcard:nth-child(2):hover { transform: translateY(-4px) rotate(1deg); }
+  .postcard:nth-child(3):hover { transform: translateY(-4px) rotate(-0.5deg); }
+
+  .postcard .postmark {
     position: absolute;
-    top: 12px; right: 28px;
-    font-family: 'Fraunces', serif;
-    font-size: 4rem;
-    color: var(--primary-light);
-    line-height: 1;
-  }
-  .testi-stars { color: #f59e0b; margin-bottom: 16px; letter-spacing: 2px; }
-  .testi-quote {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--ink);
-    margin-bottom: 24px;
-  }
-  .testi-author {
+    top: 18px; right: 18px;
+    width: 60px; height: 60px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 0.75rem;
+    color: var(--primary);
+    line-height: 1;
+    transform: rotate(15deg);
+    opacity: 0.7;
   }
-  .testi-author .avatar {
+  .postcard .quote {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+  .postcard .signature {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 20px;
+    border-top: 1.5px dashed var(--line);
+  }
+  .postcard .avatar {
     width: 44px; height: 44px;
     border-radius: 50%;
     display: flex;
@@ -660,203 +785,125 @@
     color: white;
     font-weight: 600;
   }
-  .testi-author .name { font-weight: 600; font-size: 0.95rem; }
-  .testi-author .role { font-size: 0.85rem; color: var(--ink-soft); }
+  .postcard .who { font-weight: 600; font-size: 0.95rem; }
+  .postcard .what { font-size: 0.85rem; color: var(--ink-soft); }
 
-  /* ---------- CTA ---------- */
-  .cta-section {
-    padding: 80px 0;
-  }
+  /* ===== CTA — character not contact ===== */
+  .cta-section { padding: 80px 0 120px; }
   .cta-box {
-    background: linear-gradient(135deg, var(--primary) 0%, #6366f1 50%, var(--accent) 100%);
+    background: var(--ink);
+    color: var(--bg);
     border-radius: var(--radius-xl);
-    padding: 80px 60px;
+    padding: 90px 60px;
     text-align: center;
-    color: white;
     position: relative;
     overflow: hidden;
   }
   .cta-box::before, .cta-box::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.1);
+    content: ""; position: absolute; border-radius: 50%;
+    opacity: 0.08;
   }
-  .cta-box::before { width: 300px; height: 300px; top: -100px; right: -80px; }
-  .cta-box::after { width: 200px; height: 200px; bottom: -80px; left: -50px; }
+  .cta-box::before { width: 400px; height: 400px; background: var(--accent); top: -150px; right: -100px; }
+  .cta-box::after { width: 300px; height: 300px; background: var(--primary); bottom: -120px; left: -80px; }
   .cta-box > * { position: relative; z-index: 1; }
-  .cta-box h2 { color: white; margin-bottom: 16px; }
-  .cta-box p { font-size: 1.15rem; opacity: 0.95; max-width: 600px; margin: 0 auto 36px; }
+  .cta-box .stamp { color: var(--accent); border-color: var(--accent); background: transparent; margin-bottom: 28px; }
+  .cta-box h2 { color: var(--bg); margin-bottom: 18px; }
+  .cta-box h2 em { color: var(--accent); font-style: italic; }
+  .cta-box p { font-size: 1.18rem; color: rgba(250,246,238,0.8); max-width: 580px; margin: 0 auto 36px; }
   .cta-box .btn-primary {
-    background: white;
-    color: var(--primary);
-  }
-  .cta-box .btn-primary:hover { background: var(--ink); color: white; }
-
-  /* ---------- Contact ---------- */
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-    align-items: start;
-  }
-  .contact-info h2 { margin-bottom: 16px; }
-  .contact-info > p { color: var(--ink-soft); margin-bottom: 32px; font-size: 1.05rem; }
-  .contact-list {
-    list-style: none;
-    margin: 0; padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .contact-list li {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-  }
-  .contact-list .icon {
-    width: 40px; height: 40px;
-    border-radius: 10px;
-    background: var(--primary-light);
-    color: var(--primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .contact-list strong { display: block; margin-bottom: 2px; }
-  .contact-list span { color: var(--ink-soft); font-size: 0.95rem; }
-
-  form {
-    background: var(--bg-soft);
-    border-radius: var(--radius-lg);
-    padding: 36px;
-    border: 1px solid var(--line);
-  }
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .form-group {
-    margin-bottom: 16px;
-  }
-  .form-group label {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: 6px;
+    background: var(--accent);
     color: var(--ink);
+    box-shadow: 0 12px 24px -8px rgba(229, 162, 59, 0.5);
   }
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-    font-size: 0.95rem;
-    font-family: inherit;
-    background: white;
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
-  }
-  .form-group textarea { resize: vertical; min-height: 110px; }
-  form .btn { width: 100%; padding: 16px; }
-  .form-status {
-    margin-top: 12px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--primary);
-    min-height: 1.2em;
+  .cta-box .btn-primary:hover { background: #F2B048; transform: translateY(-2px) rotate(-1deg); }
+  .cta-meta {
+    margin-top: 24px;
+    font-family: 'Caveat', cursive;
+    color: rgba(250,246,238,0.55);
+    font-size: 1.15rem;
   }
 
-  /* ---------- Footer ---------- */
+  /* ===== Footer ===== */
   footer {
-    background: var(--ink);
-    color: rgba(255,255,255,0.7);
-    padding: 60px 0 30px;
+    background: var(--bg-soft);
+    padding: 70px 0 30px;
+    border-top: 1.5px solid var(--line);
   }
   .footer-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
-  .footer-grid .logo { color: white; margin-bottom: 16px; }
-  .footer-grid > div > p { font-size: 0.95rem; line-height: 1.6; max-width: 320px; }
+  .footer-grid .logo { color: var(--ink); margin-bottom: 16px; }
+  .footer-grid > div > p { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.6; max-width: 320px; }
   .footer-col h4 {
-    color: white;
     font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
     margin: 0 0 18px;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.15em;
+    color: var(--ink);
   }
-  .footer-col ul {
-    list-style: none;
-    margin: 0; padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .footer-col a {
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.65);
-    transition: color 0.2s;
-  }
-  .footer-col a:hover { color: white; }
+  .footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a { font-size: 0.95rem; color: var(--ink-soft); transition: color 0.2s; }
+  .footer-col a:hover { color: var(--primary); }
   .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1.5px dashed var(--line);
     padding-top: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 16px;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
   }
-  .socials { display: flex; gap: 12px; }
+  .footer-bottom .heart { color: var(--primary); }
+  .socials { display: flex; gap: 10px; }
   .socials a {
     width: 36px; height: 36px;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    background: transparent;
+    border: 1.5px solid var(--line);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.2s;
+    transition: all 0.2s;
+    color: var(--ink-soft);
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem;
   }
-  .socials a:hover { background: var(--primary); color: white; }
+  .socials a:hover { background: var(--primary); color: var(--bg); border-color: var(--primary); }
 
-  /* ---------- Animations ---------- */
+  /* ===== Animations ===== */
   .reveal {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-d1 { transition-delay: 0.1s; }
+  .reveal-d2 { transition-delay: 0.2s; }
+  .reveal-d3 { transition-delay: 0.3s; }
+  .reveal-d4 { transition-delay: 0.4s; }
 
-  /* ---------- Responsive ---------- */
-  @media (max-width: 960px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    .hero-visual { height: 420px; max-width: 480px; margin: 0 auto; width: 100%; }
-    .courses-grid, .testi-grid { grid-template-columns: 1fr; }
-    .steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
-    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  /* ===== Responsive ===== */
+  @media (max-width: 980px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 60px; }
+    .hero-chat { margin: 0 auto; transform: rotate(0); }
+    .how-grid { grid-template-columns: 1fr; gap: 60px; }
+    .notebook { transform: rotate(0); }
+    .moments-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: auto;
+    }
+    .m-1, .m-2, .m-3, .m-4, .m-5, .m-6, .m-7 { grid-column: span 1; grid-row: auto; }
+    .m-1 .phrase { font-size: 1.8rem; }
+    .formats-grid { grid-template-columns: 1fr; }
+    .voices-grid { grid-template-columns: 1fr; }
+    .postcard { transform: rotate(0) !important; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 720px) {
@@ -867,29 +914,28 @@
     .nav.open .nav-links {
       display: flex;
       position: absolute;
-      top: 72px; left: 0; right: 0;
-      background: white;
+      top: 76px; left: 0; right: 0;
+      background: var(--bg);
       flex-direction: column;
-      padding: 24px;
+      padding: 28px;
       gap: 18px;
       border-bottom: 1px solid var(--line);
       box-shadow: var(--shadow-md);
     }
     .nav.open .nav-cta .btn { display: inline-flex; }
-    .nav.open .nav-cta { gap: 12px; }
-    section { padding: 70px 0; }
-    .hero { padding: 40px 0 70px; }
-    .hero-visual { height: 380px; }
-    .hero-card-main { width: 280px; }
-    .form-row { grid-template-columns: 1fr; }
-    .cta-box { padding: 50px 28px; }
-    .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+    section { padding: 80px 0; }
+    .hero { padding: 40px 0 80px; }
+    .floating-1, .floating-2, .floating-3 { display: none; }
+    .hero-trust { gap: 28px; }
+    .hero-trust-item .num { font-size: 1.8rem; }
+    .cta-box { padding: 60px 28px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 36px; }
     .footer-bottom { justify-content: center; text-align: center; }
   }
   @media (max-width: 480px) {
-    .hero-stats { gap: 24px; }
-    .hero-card-rating { right: 0; }
-    .hero-card-bubble { left: 10px; }
+    .moments-grid { grid-template-columns: 1fr; }
+    .hero-chat { padding: 20px; }
+    .bubble { font-size: 0.88rem; }
   }
 </style>
 </head>
@@ -898,20 +944,17 @@
 <!-- ===== NAV ===== -->
 <nav class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="#" class="logo">
-      <span class="logo-mark">L</span>
-      Lingua Mundi
-    </a>
+    <a href="#" class="logo">parole<span class="dot"></span></a>
     <ul class="nav-links">
-      <li><a href="#languages">Sprachen</a></li>
-      <li><a href="#features">Warum wir</a></li>
-      <li><a href="#courses">Kurse</a></li>
-      <li><a href="#testimonials">Stimmen</a></li>
+      <li><a href="#moments">Momente</a></li>
+      <li><a href="#how">So läuft's</a></li>
+      <li><a href="#formats">Formate</a></li>
+      <li><a href="#voices">Stimmen</a></li>
       <li><a href="#contact">Kontakt</a></li>
     </ul>
     <div class="nav-cta">
       <a href="#" class="login">Anmelden</a>
-      <a href="#contact" class="btn btn-primary">Kostenlos testen</a>
+      <a href="#contact" class="btn btn-primary">Probestunde</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menü"><span></span></button>
     </div>
   </div>
@@ -920,218 +963,253 @@
 <!-- ===== HERO ===== -->
 <header class="hero">
   <div class="container hero-grid">
-    <div class="hero-text">
-      <span class="eyebrow reveal">12 Sprachen · 40+ Lehrkräfte · seit 2014</span>
-      <h1 class="reveal reveal-delay-1">Sprachen lernen,<br/><span class="gradient-text">die dich verändern.</span></h1>
-      <p class="hero-sub reveal reveal-delay-2">
-        Persönlicher Unterricht mit muttersprachlichen Lehrkräften. Live online oder in unseren Studios in Berlin, Wien und Zürich. Flexibel, effizient, mit echtem Fortschritt — ab der ersten Stunde.
+    <div>
+      <span class="eyebrow reveal">Sprachschule mit Wärme · seit 2014</span>
+      <h1 class="reveal reveal-d1">Lerne Sprachen,<br/>die nach <em>Urlaub</em><br/>schmecken.</h1>
+      <p class="hero-sub reveal reveal-d2">
+        Parole ist eine kleine Sprachschule mit Charakter. Bei uns lernst du Vokabeln, die du am nächsten Tag wirklich brauchst — beim Bestellen, im Café, beim Flirten in Lissabon.
       </p>
-      <div class="hero-cta reveal reveal-delay-3">
-        <a href="#contact" class="btn btn-accent">Probestunde buchen <span class="arrow">→</span></a>
-        <a href="#courses" class="btn btn-ghost">Kurse ansehen</a>
+      <span class="hero-annotation reveal reveal-d2">— keine graue Theorie, versprochen.</span>
+      <div class="hero-cta reveal reveal-d3">
+        <a href="#contact" class="btn btn-primary">Probestunde buchen <span class="arrow">→</span></a>
+        <a href="#how" class="btn btn-ghost">Wie läuft eine Stunde ab?</a>
       </div>
-      <div class="hero-stats reveal reveal-delay-4">
-        <div class="hero-stat">
-          <strong>8.500+</strong>
-          <span>Aktive Lernende</span>
+      <div class="hero-trust reveal reveal-d4">
+        <div class="hero-trust-item">
+          <div class="num">4,9</div>
+          <div class="lbl">⭐ von 2.134<br/>Bewertungen</div>
         </div>
-        <div class="hero-stat">
-          <strong>4,9 / 5</strong>
-          <span>Bewertung</span>
+        <div class="hero-trust-item">
+          <div class="num">12</div>
+          <div class="lbl">Sprachen<br/>im Studio</div>
         </div>
-        <div class="hero-stat">
-          <strong>96%</strong>
-          <span>Weiterempfehlung</span>
+        <div class="hero-trust-item">
+          <div class="num">96%</div>
+          <div class="lbl">bleiben<br/>über 1 Jahr</div>
         </div>
       </div>
     </div>
 
-    <div class="hero-visual reveal reveal-delay-2">
-      <div class="hero-card hero-card-main">
-        <div class="label">Heute · 18:30</div>
-        <div class="lang">Spanisch B1</div>
-        <div class="desc">mit Sofía aus Madrid</div>
-        <div class="progress"><div class="progress-fill"></div></div>
-        <div class="meta">
-          <span>Lektion 14 von 24</span>
-          <span>68%</span>
+    <div class="hero-chat reveal reveal-d2">
+      <div class="chat-header">
+        <div class="chat-avatars">
+          <div class="c1">S</div>
+          <div class="c2">L</div>
+        </div>
+        <div class="chat-meta">
+          <strong>Sofía & Lena</strong>
+          <span>Spanisch · gerade live</span>
         </div>
       </div>
-      <div class="hero-card hero-card-flag">
-        <div class="flag">🇪🇸</div>
-        <div class="name">Spanisch</div>
-        <div class="level">A1 → C2</div>
+      <div class="bubble them">
+        <span class="label">Sofía</span>
+        ¿Qué te apetece hacer este finde?
+        <span class="translation">— Was möchtest du am Wochenende machen?</span>
       </div>
-      <div class="hero-card hero-card-rating">
-        <div class="avatars">
-          <div class="a1">L</div>
-          <div class="a2">M</div>
-          <div class="a3">T</div>
-          <div class="a4">+9</div>
-        </div>
-        <div>
-          <div class="stars">★★★★★</div>
-          <div class="text"><strong>4,9 von 5</strong>2.134 Bewertungen</div>
-        </div>
+      <div class="bubble you">
+        <span class="label">Lena</span>
+        Me gustaría ir a la playa.
+        <span class="translation">— Ich würde gern an den Strand gehen.</span>
       </div>
-      <div class="hero-card hero-card-bubble">💬</div>
+      <div class="bubble them">
+        <span class="label">Sofía</span>
+        ¡Buena idea! Hay una cala escondida cerca de Valencia…
+        <span class="translation">— Gute Idee! Es gibt eine versteckte Bucht nahe Valencia…</span>
+      </div>
+      <div class="typing" aria-hidden="true"><span></span><span></span><span></span></div>
     </div>
+
+    <div class="floating floating-1 hand">¡hola, Lena!</div>
+    <div class="floating floating-2"><span class="stamp">muttersprachlich</span></div>
+    <div class="floating floating-3 hand">merci 🥐</div>
   </div>
 </header>
 
-<!-- ===== LANGUAGES ===== -->
-<section class="langs" id="languages">
+<!-- ===== MOMENTE ===== -->
+<section class="moments" id="moments">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">12 Sprachen · ein Ziel</span>
-      <h2>Wähle deine Sprache</h2>
-      <p>Von den europäischen Klassikern bis zu asiatischen Sprachen — alles mit muttersprachlichen Lehrkräften und einem klar strukturierten Lernpfad.</p>
+      <span class="eyebrow">Was du bei uns lernst</span>
+      <h2>Kleine Sätze, <em>große Wirkung.</em></h2>
+      <p>Wir unterrichten keine Liste von 2.000 Vokabeln. Wir bringen dir die Sätze bei, die du am Dienstag in der Bar in Sevilla, am Sonntag in der Métro in Paris, oder beim Vorstellungsgespräch in Mailand wirklich brauchst.</p>
     </div>
-    <div class="lang-grid">
-      <div class="lang-tile reveal"><div class="flag-big">🇬🇧</div><div class="lang-name">Englisch</div><div class="lang-students">2.100 Lernende</div></div>
-      <div class="lang-tile reveal reveal-delay-1"><div class="flag-big">🇪🇸</div><div class="lang-name">Spanisch</div><div class="lang-students">1.640 Lernende</div></div>
-      <div class="lang-tile reveal reveal-delay-2"><div class="flag-big">🇫🇷</div><div class="lang-name">Französisch</div><div class="lang-students">1.220 Lernende</div></div>
-      <div class="lang-tile reveal reveal-delay-3"><div class="flag-big">🇮🇹</div><div class="lang-name">Italienisch</div><div class="lang-students">890 Lernende</div></div>
-      <div class="lang-tile reveal"><div class="flag-big">🇩🇪</div><div class="lang-name">Deutsch</div><div class="lang-students">760 Lernende</div></div>
-      <div class="lang-tile reveal reveal-delay-1"><div class="flag-big">🇵🇹</div><div class="lang-name">Portugiesisch</div><div class="lang-students">540 Lernende</div></div>
-      <div class="lang-tile reveal reveal-delay-2"><div class="flag-big">🇯🇵</div><div class="lang-name">Japanisch</div><div class="lang-students">430 Lernende</div></div>
-      <div class="lang-tile reveal reveal-delay-3"><div class="flag-big">🇨🇳</div><div class="lang-name">Chinesisch</div><div class="lang-students">380 Lernende</div></div>
-      <div class="lang-tile reveal"><div class="flag-big">🇰🇷</div><div class="lang-name">Koreanisch</div><div class="lang-students">210 Lernende</div></div>
-      <div class="lang-tile reveal reveal-delay-1"><div class="flag-big">🇳🇱</div><div class="lang-name">Niederländisch</div><div class="lang-students">180 Lernende</div></div>
-      <div class="lang-tile reveal reveal-delay-2"><div class="flag-big">🇸🇪</div><div class="lang-name">Schwedisch</div><div class="lang-students">120 Lernende</div></div>
-      <div class="lang-tile reveal reveal-delay-3"><div class="flag-big">🇹🇷</div><div class="lang-name">Türkisch</div><div class="lang-students">90 Lernende</div></div>
-    </div>
-  </div>
-</section>
 
-<!-- ===== FEATURES ===== -->
-<section id="features">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Warum Lingua Mundi</span>
-      <h2>Eine Methode, die wirklich funktioniert</h2>
-      <p>Wir kombinieren bewährte Didaktik mit moderner Technologie — damit du schneller sprichst, als du selbst gedacht hättest.</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature reveal">
-        <div class="feature-icon ic-1">🗣️</div>
-        <h3>Muttersprachliche Lehrkräfte</h3>
-        <p>Alle über 40 Lehrkräfte sind zertifiziert und sprechen die Sprache als ihre Muttersprache. Keine Kompromisse.</p>
+    <div class="moments-grid">
+      <div class="moment m-1 reveal">
+        <span class="lang-tag">🇪🇸 Spanisch</span>
+        <div class="phrase">Una caña, <em>por favor.</em></div>
+        <div class="meaning">Ein kleines Bier, bitte.</div>
+        <div class="pronounce">/ˈu.na ˈka.na por faˈβor/</div>
+        <div class="context">Situation: Du sitzt in einer Tapas-Bar in Granada, die Karte ist auf Spanisch, und du willst dich trauen.</div>
       </div>
-      <div class="feature reveal reveal-delay-1">
-        <div class="feature-icon ic-2">📅</div>
-        <h3>Flexible Terminplanung</h3>
-        <p>Stornieren oder verschieben bis 12 Stunden vorher kostenlos. Lerne wann es in deinen Alltag passt.</p>
+
+      <div class="moment m-2 reveal reveal-d1">
+        <span class="lang-tag">🇫🇷 Französisch</span>
+        <div class="phrase">Je peux avoir l'addition, s'il vous plaît?</div>
+        <div class="meaning">Die Rechnung, bitte?</div>
+        <div class="pronounce">/ʒə pø a.vwaʁ l‿a.di.sjɔ̃ sil vu plɛ/</div>
       </div>
-      <div class="feature reveal reveal-delay-2">
-        <div class="feature-icon ic-3">🎯</div>
-        <h3>Persönlicher Lernplan</h3>
-        <p>Nach einem kurzen Einstufungstest erstellen wir deinen individuellen Plan — angepasst an Ziel, Tempo und Interessen.</p>
+
+      <div class="moment m-3 reveal reveal-d2">
+        <span class="lang-tag">🇮🇹 Italienisch</span>
+        <div class="phrase">È buonissimo!</div>
+        <div class="meaning">Das ist richtig gut!</div>
       </div>
-      <div class="feature reveal">
-        <div class="feature-icon ic-4">💻</div>
-        <h3>Live &amp; hybrid</h3>
-        <p>Online von zu Hause oder in einem unserer Studios — kombiniere, wie es dir gefällt.</p>
+
+      <div class="moment m-4 reveal reveal-d3">
+        <span class="lang-tag">🇬🇧 Englisch</span>
+        <div class="phrase">I was wondering if you'd be open to a quick chat?</div>
+        <div class="meaning">Hätten Sie kurz Zeit für ein Gespräch?</div>
       </div>
-      <div class="feature reveal reveal-delay-1">
-        <div class="feature-icon ic-5">📊</div>
-        <h3>Transparente Fortschritte</h3>
-        <p>Dein Dashboard zeigt Lernziele, Hausaufgaben und erreichte Niveaustufen — damit du nie den Überblick verlierst.</p>
+
+      <div class="moment m-5 reveal reveal-d4">
+        <span class="lang-tag">🇯🇵 Japanisch</span>
+        <div class="phrase"> Sumimasen, <em>eigo o hanasemasu ka?</em></div>
+        <div class="meaning">Entschuldigung, spricht hier jemand Englisch?</div>
+        <div class="pronounce">/su.mi.ma.sen/</div>
+        <div class="context">Die wichtigste Rettungs-Phrase in Tokio. Funktioniert immer.</div>
       </div>
-      <div class="feature reveal reveal-delay-2">
-        <div class="feature-icon ic-6">🏆</div>
-        <h3>Offiziell anerkannte Zertifikate</h3>
-        <p>Bereite dich auf Cambridge, DELF, DELE, Goethe oder CELPIP vor — mit der Sicherheit einer geprüften Institution.</p>
+
+      <div class="moment m-6 reveal">
+        <span class="lang-tag">🇵🇹 Portugiesisch</span>
+        <div class="phrase">Onde fica a praia?</div>
+        <div class="meaning">Wo ist der Strand?</div>
+      </div>
+
+      <div class="moment m-7 reveal reveal-d1">
+        <span class="lang-tag">🇩🇪 Deutsch</span>
+        <div class="phrase">Können wir das später besprechen?</div>
+        <div class="meaning">— small talk, der Zeit verschafft.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== HOW IT WORKS ===== -->
-<section class="how">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">In 4 Schritten loslegen</span>
-      <h2>So einfach geht's</h2>
-    </div>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-num">1</div>
-        <h3>Kostenlos testen</h3>
-        <p>30-minütige Probestunde mit einer Lehrkraft deiner Wahl — unverbindlich.</p>
-      </div>
-      <div class="step reveal reveal-delay-1">
-        <div class="step-num">2</div>
-        <h3>Einstufung</h3>
-        <p>Wir testen dein Niveau und hören zu: Was sind deine Ziele?</p>
-      </div>
-      <div class="step reveal reveal-delay-2">
-        <div class="step-num">3</div>
-        <h3>Lernplan</h3>
-        <p>Du erhältst einen klaren Fahrplan mit Meilensteinen bis zum Ziel.</p>
-      </div>
-      <div class="step reveal reveal-delay-3">
-        <div class="step-num">4</div>
-        <h3>Durchstarten</h3>
-        <p>Regelmäßige Stunden, Hausaufgaben, Fortschritt — sichtbar Woche für Woche.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== COURSES ===== -->
-<section id="courses">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Kurse &amp; Pakete</span>
-      <h2>Finde das passende Format</h2>
-      <p>Ob Sprint zum Urlaub, Business-Englisch oder langer Atem für die C1-Prüfung — wir haben das richtige Paket.</p>
-    </div>
-    <div class="courses-grid">
-      <div class="course reveal">
-        <h3>Drop-in</h3>
-        <p class="course-desc">Einzelstunden, ganz flexibel. Perfekt zum Reinschnuppern.</p>
-        <div class="price">
-          <div class="price-num">29€</div>
-          <span>/ 60 Min.</span>
+<!-- ===== HOW IT FEELS ===== -->
+<section class="how" id="how">
+  <div class="container how-grid">
+    <div class="how-left reveal">
+      <span class="eyebrow">So fühlt sich eine Stunde an</span>
+      <h2>Kein Schul-<em>unterricht.</em><br/>Eher ein Gespräch unter Freunden — nur auf Spanisch.</h2>
+      <p>Unsere Stunden sind klein, intensiv, und voller echter Momente. Du wirst nicht 45 Minuten lang Grammatik-Tafeln anschauen. Du wirst mit deiner Lehrkraft reden, lachen, und ab und zu über ein Wort stolpern. So lernt das Gehirn Sprache.</p>
+      <div class="lesson-steps">
+        <div class="lesson-step">
+          <div class="num">5'</div>
+          <div>
+            <h3>Ankommen &amp; Aufwärmen</h3>
+            <p>Kurzer Plausch — wie war dein Tag, was ist passiert. Wir sprechen sofort in der Zielsprache.</p>
+          </div>
         </div>
-        <ul class="course-features">
-          <li>Einzel- oder Gruppenstunde</li>
-          <li>Jederzeit buchbar</li>
-          <li>Keine Mindestlaufzeit</li>
-          <li>Online oder vor Ort</li>
-        </ul>
-        <a href="#contact" class="btn btn-ghost">Stunde buchen</a>
+        <div class="lesson-step">
+          <div class="num">20'</div>
+          <div>
+            <h3>Neues Material</h3>
+            <p>Ein kurzer Text, ein Hör-Snippet, oder ein Szenario. Etwas, das dich interessiert.</p>
+          </div>
+        </div>
+        <div class="lesson-step">
+          <div class="num">25'</div>
+          <div>
+            <h3>Üben, üben, üben</h3>
+            <p>Dialog-Rollen, Mini-Debatten, Aussprache-Drills. Aktiv sprechen — kein passives Zuhören.</p>
+          </div>
+        </div>
+        <div class="lesson-step">
+          <div class="num">5'</div>
+          <div>
+            <h3>Hausaufgabe mit Geschmack</h3>
+            <p>Ein Rezept auf Italienisch lesen. Einen Songtext übersetzen. Einen 5-Sätze-Tagebuch-Eintrag schreiben.</p>
+          </div>
+        </div>
       </div>
-      <div class="course featured reveal reveal-delay-1">
-        <div class="course-badge">Beliebt</div>
-        <h3>Intensiv</h3>
-        <p class="course-desc">10er-Paket mit persönlichem Lernplan und Hausaufgaben-Betreuung.</p>
+    </div>
+
+    <div class="notebook reveal reveal-d1">
+      <div class="notebook-title">Heute, 18:30 — Spanisch B1.2</div>
+      <div class="notebook-sub">con Sofía, 12. Lektion von 24</div>
+      <div class="notebook-dialog">
+        <div class="n-line">
+          <div class="who">Sofía:</div>
+          <div class="text">Cuéntame algo <em>divertido</em> que te pasó esta semana.</div>
+        </div>
+        <div class="n-line">
+          <div class="who">Lena:</div>
+          <div class="text">El martes me perdí en el metro… <em>¡pero encontré una cafetería increíble!</em><span class="note">→ gute Struktur, kleiner Fehler mit dem Imperfekt</span></div>
+        </div>
+        <div class="n-line">
+          <div class="who">Sofía:</div>
+          <div class="text">¡Eso es lo mejor de perderse! ¿Qué tomaste?</div>
+        </div>
+        <div class="n-line">
+          <div class="who">Lena:</div>
+          <div class="text">Un <em>café con leche</em> y una <em>tostada con tomate</em>.<span class="note">→ flüssig, perfekt ausgesprochen ✨</span></div>
+        </div>
+        <div class="n-line">
+          <div class="who">Sofía:</div>
+          <div class="text">Eso suena como un domingo en Madrid. <em>Vamos a practicar más</em> este vocabulario.</div>
+        </div>
+      </div>
+      <div class="notebook-footer">
+        ✏️ Hausaufgabe: Einen kurzen Text über dein Lieblingscafé schreiben. 80–100 Wörter.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FORMATS ===== -->
+<section id="formats">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Drei Wege zu lernen</span>
+      <h2>Wähle, was zu <em>deinem Leben</em> passt.</h2>
+      <p>Manche wollen den Spanisch-Sprint vor dem Urlaub. Manche zwei Jahre lang Japanisch lernen. Beides ist okay.</p>
+    </div>
+    <div class="formats-grid">
+      <div class="format format-tall reveal">
+        <div class="badge"><span class="stamp">am beliebtesten</span></div>
+        <h3>Intensiv-Paket</h3>
+        <p class="format-desc">10 Einzelstunden mit deiner Wunsch-Lehrkraft. Persönlicher Plan, Hausaufgaben-Betreuung, und eine kleine Überraschung nach Lektion 5.</p>
         <div class="price">
           <div class="price-num">249€</div>
           <span>/ 10 × 60 Min.</span>
         </div>
-        <ul class="course-features">
-          <li>10 Einzelstunden</li>
-          <li>Persönlicher Lernplan</li>
-          <li>Wöchentliche Hausaufgaben</li>
+        <ul class="format-features">
+          <li>10 Stunden, flexibel einteilbar</li>
+          <li>Persönlicher Lernplan &amp; Einstufung</li>
+          <li>Wöchentliche Hausaufgaben mit Feedback</li>
           <li>Fortschritts-Dashboard</li>
-          <li>30 Tage gültig</li>
+          <li>1 × 30 Min. Notfall-Slot pro Monat</li>
+          <li>Eine kleine Überraschung. Versprochen.</li>
         </ul>
-        <a href="#contact" class="btn btn-accent">Paket wählen</a>
+        <a href="#contact" class="btn btn-primary">Paket wählen <span class="arrow">→</span></a>
       </div>
-      <div class="course reveal reveal-delay-2">
-        <h3>Jahres-Abo</h3>
-        <p class="course-desc">Unbegrenzt lernen für alle, die ein Ziel vor Augen haben.</p>
+
+      <div class="format reveal reveal-d1">
+        <h3>Drop-in</h3>
+        <p class="format-desc">Eine Stunde, ganz ohne Verpflichtung. Schnuppern, ausprobieren, weitermachen — oder auch nicht.</p>
+        <div class="price">
+          <div class="price-num">29€</div>
+          <span>/ 60 Min.</span>
+        </div>
+        <ul class="format-features">
+          <li>Einzel- oder Gruppenstunde</li>
+          <li>Jederzeit online buchen</li>
+          <li>Keine Mindestlaufzeit</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Stunde buchen</a>
+      </div>
+
+      <div class="format reveal reveal-d2">
+        <h3>Jahres-Mitglied</h3>
+        <p class="format-desc">Du hast ein echtes Ziel — C1 für den Job, ein Studium im Ausland, ein langer Aufenthalt. Wir gehen die Strecke mit dir.</p>
         <div class="price">
           <div class="price-num">99€</div>
           <span>/ Monat</span>
         </div>
-        <ul class="course-features">
+        <ul class="format-features">
           <li>4 Stunden pro Monat inklusive</li>
-          <li>Zusatzstunden zum Vorzugspreis</li>
           <li>Quartals-Fortschrittsgespräch</li>
-          <li>Zertifikats-Vorbereitung</li>
+          <li>Zertifikats-Vorbereitung inkl.</li>
           <li>12 Monate Laufzeit</li>
         </ul>
         <a href="#contact" class="btn btn-ghost">Beratung</a>
@@ -1140,44 +1218,44 @@
   </div>
 </section>
 
-<!-- ===== TESTIMONIALS ===== -->
-<section class="testimonials" id="testimonials">
+<!-- ===== VOICES ===== -->
+<section class="voices" id="voices">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Stimmen unserer Lernenden</span>
-      <h2>Echte Geschichten, echter Fortschritt</h2>
+      <span class="eyebrow">Postkarten aus dem Unterricht</span>
+      <h2>Was unsere <em>Lernenden</em> erzählen.</h2>
     </div>
-    <div class="testi-grid">
-      <div class="testi reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">Nach sechs Monaten mit Lingua Mundi habe ich tatsächlich meine erste Präsentation auf Englisch gehalten. Ohne zu zittern.</p>
-        <div class="testi-author">
-          <div class="avatar" style="background: var(--primary)">AK</div>
+    <div class="voices-grid">
+      <div class="postcard reveal">
+        <div class="postmark">3 Monate · B1 erreicht</div>
+        <p class="quote">„Ich hab im Mai in Barcelona einen Taxifahrer nach dem Weg gefragt. Er hat geantwortet, ich hab geantwortet, wir haben gelacht. Ich hab vergessen, dass das vor drei Monaten noch unmöglich war."</p>
+        <div class="signature">
+          <div class="avatar" style="background: var(--primary);">M</div>
           <div>
-            <div class="name">Anna K.</div>
-            <div class="role">Produktmanagerin · Englisch B2</div>
+            <div class="who">Marie, 34</div>
+            <div class="what">Spanisch · für den Umzug nach Barcelona</div>
           </div>
         </div>
       </div>
-      <div class="testi reveal reveal-delay-1">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">Mein Lehrer Carlos ist großartig — geduldig, lustig, und er merkt sich, was mich interessiert. So macht Lernen Spaß.</p>
-        <div class="testi-author">
-          <div class="avatar" style="background: var(--accent)">MS</div>
+      <div class="postcard reveal reveal-d1">
+        <div class="postmark">1 Jahr · DELF B2 bestanden</div>
+        <p class="quote">„Mein Lehrer Mehdi bringt mich regelmäßig zum Lachen. Ich komm aus der Stunde raus und hab das Gefühl, ich hab was Warmes gegessen — so eine Art Gemüts-Snack."</p>
+        <div class="signature">
+          <div class="avatar" style="background: var(--accent-3);">T</div>
           <div>
-            <div class="name">Markus S.</div>
-            <div class="role">Student · Spanisch A2</div>
+            <div class="who">Tobias, 41</div>
+            <div class="what">Französisch · B2-Zertifikat für den Job</div>
           </div>
         </div>
       </div>
-      <div class="testi reveal reveal-delay-2">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">Ich brauchte DELF B2 für meinen Job in Lyon. Dank Lingua Mundi hab ich beim ersten Versuch bestanden.</p>
-        <div class="testi-author">
-          <div class="avatar" style="background: #10b981">JH</div>
+      <div class="postcard reveal reveal-d2">
+        <div class="postmark">6 Monate · erste Konversation</div>
+        <p class="quote">„Letzten Sonntag hab ich zum ersten Mal einen Traum auf Italienisch gehabt. Ich bin schweißgebadet aufgewacht — aber vor Freude. Das ist der Moment, für den ich lerne."</p>
+        <div class="signature">
+          <div class="avatar" style="background: var(--accent-2);">R</div>
           <div>
-            <div class="name">Julia H.</div>
-            <div class="role">Architektin · Französisch B2</div>
+            <div class="who">Rana, 28</div>
+            <div class="what">Italienisch · A2 → B1 unterwegs</div>
           </div>
         </div>
       </div>
@@ -1186,96 +1264,14 @@
 </section>
 
 <!-- ===== CTA ===== -->
-<section class="cta-section">
+<section class="cta-section" id="contact">
   <div class="container">
     <div class="cta-box reveal">
-      <h2>Deine erste Stunde ist gratis.</h2>
-      <p>Probier uns aus — unverbindlich, ohne Vertrag, mit einer echten Lehrkraft, die auf dein Ziel hört. 30 Minuten, die alles verändern können.</p>
-      <a href="#contact" class="btn btn-primary">Probestunde buchen <span class="arrow">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact" style="background: var(--bg-soft);">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <span class="eyebrow">Kontakt</span>
-        <h2 style="margin-top: 16px;">Sag Hallo.</h2>
-        <p>Schreib uns kurz, was du lernen möchtest — wir melden uns innerhalb eines Werktags mit einem Vorschlag für deine Probestunde.</p>
-        <ul class="contact-list">
-          <li>
-            <div class="icon">✉️</div>
-            <div>
-              <strong>E-Mail</strong>
-              <span>hallo@lingua-mundi.de</span>
-            </div>
-          </li>
-          <li>
-            <div class="icon">📞</div>
-            <div>
-              <strong>Telefon</strong>
-              <span>+49 30 1234 5678 · Mo–Fr 9–18 Uhr</span>
-            </div>
-          </li>
-          <li>
-            <div class="icon">📍</div>
-            <div>
-              <strong>Studios</strong>
-              <span>Berlin Mitte · Wien Innere Stadt · Zürich Altstetten</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <form class="reveal reveal-delay-1" id="contactForm" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Vor- und Nachname" />
-          </div>
-          <div class="form-group">
-            <label for="email">E-Mail</label>
-            <input type="email" id="email" name="email" required placeholder="deine@email.de" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="lang">Sprache</label>
-            <select id="lang" name="lang" required>
-              <option value="">Bitte wählen</option>
-              <option>Englisch</option>
-              <option>Spanisch</option>
-              <option>Französisch</option>
-              <option>Italienisch</option>
-              <option>Deutsch</option>
-              <option>Portugiesisch</option>
-              <option>Japanisch</option>
-              <option>Chinesisch</option>
-              <option>Andere</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="level">Aktuelles Niveau</label>
-            <select id="level" name="level">
-              <option>Absolute/r Anfänger/in</option>
-              <option>A1</option>
-              <option>A2</option>
-              <option>B1</option>
-              <option>B2</option>
-              <option>C1</option>
-              <option>C2</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="msg">Dein Ziel</label>
-          <textarea id="msg" name="msg" placeholder="Erzähl uns kurz, warum du lernen möchtest — Reise, Job, Prüfung, oder einfach Lust."></textarea>
-        </div>
-        <button type="submit" class="btn btn-accent">Probestunde anfragen <span class="arrow">→</span></button>
-        <div class="form-status" id="formStatus" aria-live="polite"></div>
-      </form>
+      <div class="stamp">erste stunde gratis</div>
+      <h2>Dein erstes Wort<br/>ist nur eine Stunde <em>entfernt.</em></h2>
+      <p>30 Minuten, eine echte Lehrkraft, ein klares Ziel. Kein Vertrag, keine Vorauswahl, keine Vokabelliste. Schreib uns einfach, welche Sprache dich ruft — wir antworten meistens innerhalb eines Werktags.</p>
+      <a href="mailto:hallo@parole.schule" class="btn btn-primary">Probestunde anfragen <span class="arrow">→</span></a>
+      <div class="cta-meta">oder ruf uns an: +49 30 12 34 56 78 · Mo–Fr 9–18 Uhr</div>
     </div>
   </div>
 </section>
@@ -1285,57 +1281,53 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="logo">
-          <span class="logo-mark">L</span>
-          Lingua Mundi
-        </div>
-        <p>Sprachen lernen mit Herz, Verstand und einem klaren Plan. Seit 2014 — und mit jeder Lernenden ein bisschen besser.</p>
+        <div class="logo">parole<span class="dot"></span></div>
+        <p>Eine kleine Sprachschule in Berlin, Wien und Zürich. Wir glauben, dass Sprachenlernen das Leben leichter, lustiger und ein bisschen weiter macht.</p>
       </div>
       <div class="footer-col">
         <h4>Sprachen</h4>
         <ul>
-          <li><a href="#languages">Englisch</a></li>
-          <li><a href="#languages">Spanisch</a></li>
-          <li><a href="#languages">Französisch</a></li>
-          <li><a href="#languages">Italienisch</a></li>
-          <li><a href="#languages">Alle Sprachen</a></li>
+          <li><a href="#moments">🇪🇸 Spanisch</a></li>
+          <li><a href="#moments">🇫🇷 Französisch</a></li>
+          <li><a href="#moments">🇮🇹 Italienisch</a></li>
+          <li><a href="#moments">🇬🇧 Englisch</a></li>
+          <li><a href="#moments">+ 8 weitere</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Schule</h4>
         <ul>
-          <li><a href="#features">Warum wir</a></li>
-          <li><a href="#courses">Kurse</a></li>
-          <li><a href="#testimonials">Stimmen</a></li>
+          <li><a href="#how">So läuft's</a></li>
+          <li><a href="#formats">Formate</a></li>
+          <li><a href="#voices">Stimmen</a></li>
           <li><a href="#">Lehrkräfte</a></li>
-          <li><a href="#">Karriere</a></li>
+          <li><a href="#">Blog</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Hilfe</h4>
+        <h4>Kontakt</h4>
         <ul>
-          <li><a href="#contact">Kontakt</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">AGB</a></li>
-          <li><a href="#">Datenschutz</a></li>
+          <li><a href="mailto:hallo@parole.schule">hallo@parole.schule</a></li>
+          <li><a href="tel:+49301234567">+49 30 12 34 56 78</a></li>
+          <li><a href="#">Berlin · Wien · Zürich</a></li>
           <li><a href="#">Impressum</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Lingua Mundi GmbH · Mit Liebe gemacht in Berlin.</span>
+      <span>© 2026 Parole GmbH · gemacht mit <span class="heart">♥</span> &amp; echtem Kaffee in Berlin.</span>
       <div class="socials" aria-label="Social Media">
-        <a href="#" aria-label="Instagram">📷</a>
+        <a href="#" aria-label="Instagram">ig</a>
+        <a href="#" aria-label="Spotify">♪</a>
         <a href="#" aria-label="LinkedIn">in</a>
-        <a href="#" aria-label="YouTube">▶</a>
-        <a href="#" aria-label="TikTok">♪</a>
+        <a href="#" aria-label="Newsletter">@</a>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
-  // ---- Sticky nav scroll state ----
+  // Sticky nav scroll state
   const nav = document.getElementById('nav');
   const onScroll = () => {
     if (window.scrollY > 8) nav.classList.add('scrolled');
@@ -1344,17 +1336,14 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // ---- Mobile menu ----
+  // Mobile menu
   const navToggle = document.getElementById('navToggle');
-  navToggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
-  // close menu on link click (mobile)
+  navToggle.addEventListener('click', () => nav.classList.toggle('open'));
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.addEventListener('click', () => nav.classList.remove('open'));
   });
 
-  // ---- Scroll reveal (IntersectionObserver) ----
+  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
@@ -1364,13 +1353,13 @@
           io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     reveals.forEach(el => io.observe(el));
   } else {
     reveals.forEach(el => el.classList.add('visible'));
   }
 
-  // ---- Smooth scroll for anchor links (offset for sticky nav) ----
+  // Smooth scroll with sticky offset
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
       const id = link.getAttribute('href');
@@ -1378,33 +1367,9 @@
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - 72;
+      const top = target.getBoundingClientRect().top + window.scrollY - 76;
       window.scrollTo({ top, behavior: 'smooth' });
     });
-  });
-
-  // ---- Contact form (demo: validation + success message) ----
-  const form = document.getElementById('contactForm');
-  const formStatus = document.getElementById('formStatus');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const lang = form.lang.value;
-    if (!name || !email || !lang) {
-      formStatus.style.color = 'var(--accent-dark)';
-      formStatus.textContent = 'Bitte fülle Name, E-Mail und Sprache aus.';
-      return;
-    }
-    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!emailOk) {
-      formStatus.style.color = 'var(--accent-dark)';
-      formStatus.textContent = 'Bitte eine gültige E-Mail-Adresse eingeben.';
-      return;
-    }
-    formStatus.style.color = 'var(--primary)';
-    formStatus.textContent = 'Danke! Wir melden uns innerhalb eines Werktags.';
-    form.reset();
   });
 </script>
 
