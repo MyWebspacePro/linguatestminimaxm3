@@ -32,15 +32,15 @@
     --ink-soft: #4A5462;
     --ink-muted: #7A8290;
     --line: #DDD3BE;
-    --primary: #B8410E;
-    --primary-dark: #8C2F08;
-    --primary-light: #F2D8C4;
-    --accent: #3D5A40;
+    --primary: #a20000; /* alt: #B8410E (orange/terracotta) */
+    --primary-dark: #6B0000;
+    --primary-light: #F2D0D0;
+    --accent: #03508c; /* alt: #3D5A40 (grün) */
     --accent-2: #6B5B3E;
     --shadow-sm: 0 1px 2px rgba(26, 35, 50, 0.06);
     --shadow-md: 0 6px 18px -6px rgba(26, 35, 50, 0.12), 0 2px 4px -2px rgba(26, 35, 50, 0.06);
     --shadow-lg: 0 20px 40px -10px rgba(26, 35, 50, 0.18);
-    --shadow-warm: 0 14px 30px -10px rgba(184, 65, 14, 0.25);
+    --shadow-warm: 0 14px 30px -10px rgba(162, 0, 0, 0.25);
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
@@ -117,7 +117,7 @@
   .btn-primary:hover {
     background: var(--primary-dark);
     transform: translateY(-2px) rotate(-1deg);
-    box-shadow: 0 18px 36px -10px rgba(184, 65, 14, 0.4);
+    box-shadow: 0 18px 36px -10px rgba(162, 0, 0, 0.4);
   }
   .btn-ghost {
     color: var(--ink);
@@ -157,15 +157,6 @@
     font-size: 1.7rem;
     font-weight: 600;
     letter-spacing: -0.02em;
-  }
-  .logo .since {
-    font-family: 'Caveat', cursive;
-    font-size: 1rem;
-    color: var(--ink-muted);
-    font-weight: 500;
-    transform: rotate(-3deg);
-    display: inline-block;
-    margin-left: 4px;
   }
   .nav-links {
     display: flex;
@@ -224,7 +215,7 @@
     position: absolute;
     top: -100px; right: -150px;
     width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(184, 65, 14, 0.12), transparent 65%);
+    background: radial-gradient(circle, rgba(162, 0, 0, 0.12), transparent 65%);
     z-index: 0;
   }
   .hero::after {
@@ -232,7 +223,7 @@
     position: absolute;
     bottom: -150px; left: -100px;
     width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(61, 90, 64, 0.10), transparent 65%);
+    background: radial-gradient(circle, rgba(3, 80, 140, 0.10), transparent 65%);
     z-index: 0;
   }
   .hero-grid {
@@ -444,6 +435,32 @@
   .lang-card .meta strong:first-child { margin-top: 0; }
   .lang-card .name-row { display: flex; align-items: center; }
   .lang-card .lang-text { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.5; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); hyphens: auto; -webkit-hyphens: auto; text-align: justify; }
+  .lang-card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 16px;
+  }
+  .lang-card .lang-pdf-btn {
+    flex: 1;
+    text-align: center;
+    padding: 3px 14px;
+    border: 1.5px solid var(--primary);
+    border-radius: 999px;
+    color: var(--primary);
+    background: transparent;
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .lang-card .lang-pdf-btn:hover { background: var(--primary-dark); border-color: var(--primary-dark); color: var(--bg); }
+  .lang-card .lang-pdf-btn.is-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--bg);
+  }
+  .lang-card .lang-pdf-btn.is-primary:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
 
   .lc-extra {
     background: var(--ink);
@@ -613,16 +630,20 @@
   .step:not(:last-child)::after {
     content: "→";
     position: absolute;
-    right: -12px; top: 28px;
+    right: -16px; top: 0;
+    width: 24px; height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--primary);
-    font-size: 1.4rem;
-    opacity: 0.5;
+    font-size: 2rem;
+    opacity: 0.8;
   }
   .step-num {
     width: 56px; height: 56px;
     margin: 0 auto 16px;
     border-radius: 50%;
-    background: var(--ink);
+    background: var(--accent);
     color: var(--bg);
     display: flex;
     align-items: center;
@@ -640,11 +661,13 @@
   .step p { color: var(--ink-soft); font-size: 0.9rem; }
 
   /* ===== Standorte ===== */
-  .locations-section { background: var(--bg); }
+  .locations-section { background: var(--bg); padding: 110px 0 0 0; }
   .locations-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    max-width: 65%;
+    margin: 0 auto;
   }
   .location-card {
     background: #FCF9F0;
@@ -686,24 +709,16 @@
   .location-info .red { color: red; font-weight: 600; }
   .opening-hours {
     margin: 6px 0 0;
-  }
-  .opening-hours-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 16px;
     font-size: 0.95rem;
     color: var(--ink-soft);
-    padding: 2px 0;
   }
-  .opening-hours-row .day { font-weight: 500; color: var(--ink); }
+  .opening-hours .day { display: block; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
+  .opening-hours .time { display: block; }
+  .opening-hours .time + .time { margin-top: 2px; }
   .opening-hours-note {
-    margin-top: 10px;
-    padding-top: 8px;
-    border-top: 1px solid var(--line);
-    font-size: 0.88rem;
+    display: block;
+    margin-top: 6px;
     color: var(--ink-soft);
-    font-style: italic;
   }
 
   /* ===== CTA ===== */
@@ -731,7 +746,7 @@
   .cta-box .btn-primary {
     background: var(--primary);
     color: var(--bg);
-    box-shadow: 0 12px 24px -8px rgba(184, 65, 14, 0.5);
+    box-shadow: 0 12px 24px -8px rgba(162, 0, 0, 0.5);
   }
   .cta-box .btn-primary:hover { background: var(--primary-dark); }
   /* ===== Footer ===== */
@@ -742,12 +757,14 @@
   }
   .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 32px;
     margin-bottom: 50px;
   }
   .footer-grid .logo { color: var(--ink); margin-bottom: 16px; }
   .footer-grid > div > p { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.6; max-width: 320px; }
+  .footer-logo-cell { display: flex; align-items: center; }
+  .footer-logo-cell .logo { margin-bottom: 0; }
   .footer-col h4 {
     font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
@@ -760,6 +777,9 @@
   .footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
   .footer-col a { font-size: 0.95rem; color: var(--ink-soft); transition: color 0.2s; }
   .footer-col a:hover { color: var(--primary); }
+  .footer-col .social-link { display: inline-flex; align-items: center; gap: 8px; }
+  .footer-col .social-link svg { flex-shrink: 0; }
+  .footer-col .flag { margin-right: 5px; }
   .footer-bottom {
     border-top: 1.5px dashed var(--line);
     padding-top: 24px;
@@ -820,6 +840,7 @@
     .hero-trust-item .num { font-size: 1.8rem; }
     .lang-grid { grid-template-columns: 1fr; }
     .formats-grid { grid-template-columns: 1fr; }
+    .locations-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; gap: 36px; }
     .footer-bottom { justify-content: center; text-align: center; }
   }
@@ -830,7 +851,7 @@
 <!-- ===== NAV ===== -->
 <nav class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="#" class="logo">linguasud<span class="since">seit 2003</span></a>
+    <a href="#" class="logo">linguasud.com</a>
     <ul class="nav-links">
       <li><a href="#languages">Sprachen</a></li>
       <li><a href="#formats">Unterricht</a></li>
@@ -931,6 +952,10 @@
           Goethe-Zertifikate, telc.
         </div>
         <p class="lang-text">Hochdeutsch — gesprochen in Deutschland, Österreich und der Deutschschweiz, mit über 100 Millionen Muttersprachlern.</p>
+        <div class="lang-card-actions">
+          <a href="#" class="lang-pdf-btn is-primary">Laufende Kurse</a>
+          <a href="#" class="lang-pdf-btn">Mehr Infos</a>
+        </div>
       </div>
 
       <div class="lang-card reveal reveal-d1">
@@ -943,6 +968,10 @@
           Cambridge (FIRST, ADVANCED, PROFICIENCY).
         </div>
         <p class="lang-text">Die Weltsprache — im Geschäftsleben, in der Wissenschaft und im Internet zu Hause.</p>
+        <div class="lang-card-actions">
+          <a href="#" class="lang-pdf-btn is-primary">Laufende Kurse</a>
+          <a href="#" class="lang-pdf-btn">Mehr Infos</a>
+        </div>
       </div>
 
       <div class="lang-card reveal reveal-d2">
@@ -955,6 +984,10 @@
           DELF, DALF.
         </div>
         <p class="lang-text">Sprache der Diplomatie, der Mode und der Lebensart — gesprochen auf fünf Kontinenten.</p>
+        <div class="lang-card-actions">
+          <a href="#" class="lang-pdf-btn is-primary">Laufende Kurse</a>
+          <a href="#" class="lang-pdf-btn">Mehr Infos</a>
+        </div>
       </div>
 
       <div class="lang-card reveal reveal-d3">
@@ -967,6 +1000,10 @@
           CILS, CELI.
         </div>
         <p class="lang-text">Sprache der Oper, der Mode und der Lebensfreude — und im Tessin direkt vor der Haustür.</p>
+        <div class="lang-card-actions">
+          <a href="#" class="lang-pdf-btn is-primary">Laufende Kurse</a>
+          <a href="#" class="lang-pdf-btn">Mehr Infos</a>
+        </div>
       </div>
 
       <div class="lang-card reveal reveal-d4">
@@ -979,6 +1016,10 @@
           DELE (Instituto Cervantes).
         </div>
         <p class="lang-text">Eine der meistgesprochenen Sprachen der Welt — von Madrid über Mexico-Stadt bis Buenos Aires.</p>
+        <div class="lang-card-actions">
+          <a href="#" class="lang-pdf-btn is-primary">Laufende Kurse</a>
+          <a href="#" class="lang-pdf-btn">Mehr Infos</a>
+        </div>
       </div>
 
       <div class="lc-extra reveal reveal-d4">
@@ -1171,17 +1212,12 @@
           <a href="tel:+41526204438">052 620 44 38</a>
           <strong>E-Mail</strong>
           <a href="mailto:sprachkurse@linguasud.com">sprachkurse@linguasud.com</a>
-          <strong>Öffnungszeiten</strong>
+          <strong>Bürozeiten</strong>
           <div class="opening-hours">
-            <div class="opening-hours-row">
-              <span class="day">Mo–Fr</span>
-              <span>08.00–12.00 Uhr</span>
-            </div>
-            <div class="opening-hours-row">
-              <span class="day"></span>
-              <span>13.00–17.00 Uhr</span>
-            </div>
-            <div class="opening-hours-note">Termine auch abends oder samstags nach Absprache.</div>
+            <span class="day">Montag bis Freitag</span>
+            <span class="time">08.00–12.00</span>
+            <span class="time">13.00–17.00</span>
+            <div class="opening-hours-note">Termine auch über Mittag, abends oder am Samstag nach Absprache.</div>
           </div>
         </div>
       </div>
@@ -1221,44 +1257,47 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <div class="logo">linguasud<span class="since">seit 2003</span></div>
-        <p>Die grösste private Sprachschule zwischen Schaffhausen und Winterthur. Gegründet 2003 von Bernadette Hübscher. Über 25 Sprachen, kleine Gruppen, persönliche Betreuung.</p>
+      <div class="footer-logo-cell">
+        <div class="logo">linguasud.com</div>
       </div>
       <div class="footer-col">
-        <h4>Sprachen</h4>
+        <h4>Laufende Kurse</h4>
         <ul>
-          <li><a href="#languages">🇩🇪 Deutsch</a></li>
-          <li><a href="#languages">🇬🇧 Englisch</a></li>
-          <li><a href="#languages">🇫🇷 Französisch</a></li>
-          <li><a href="#languages">🇮🇹 Italienisch</a></li>
-          <li><a href="#languages">🇪🇸 Spanisch</a></li>
-          <li><a href="#contact">+ 20 weitere</a></li>
+          <li><a href="#"><span class="flag">🇩🇪</span> Deutsch</a></li>
+          <li><a href="#"><span class="flag">🇬🇧</span> Englisch</a></li>
+          <li><a href="#"><span class="flag">🇫🇷</span> Französisch</a></li>
+          <li><a href="#"><span class="flag">🇮🇹</span> Italienisch</a></li>
+          <li><a href="#"><span class="flag">🇪🇸</span> Spanisch</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Unterricht</h4>
+        <h4>Downloads</h4>
         <ul>
-          <li><a href="#formats">Gruppenkurse</a></li>
-          <li><a href="#formats">Einzel &amp; Partner</a></li>
-          <li><a href="#formats">Online</a></li>
-          <li><a href="#formats">Firmenkurse</a></li>
-          <li><a href="#how">Qualität</a></li>
+          <li><a href="#">Preisliste (DE)</a></li>
+          <li><a href="#">Price list (EN)</a></li>
+          <li><a href="#">Businesskurse</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">AGB</a></li>
+          <li><a href="#">Datenschutzerklärung</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Kontakt</h4>
         <ul>
-          <li><a href="tel:+41526204438">052 620 44 38</a></li>
-          <li><a href="mailto:sprachkurse@linguasud.com">sprachkurse@linguasud.com</a></li>
-          <li><a href="#locations">Schaffhausen</a></li>
-          <li><a href="#locations">Winterthur</a></li>
-
+          <li><a href="#">052 620 44 38</a></li>
+          <li><a href="#">sprachkurse@linguasud.com</a></li>
+          <li><a href="#" class="social-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg> Facebook</a></li>
+          <li><a href="#" class="social-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.39A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.39 2.13.67.66 1.34 1.08 2.13 1.39.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.73 2.13-1.39.66-.67 1.08-1.34 1.39-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.39-2.13A5.86 5.86 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg> Instagram</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Linguasud · gegründet 2003 von Bernadette Hübscher · in der Schweiz.</span>
+      <span>© 2026 linguasud.com - Alle Inhalte so weit möglich urheberrechtlich geschützt.</span>
     </div>
   </div>
 </footer>
