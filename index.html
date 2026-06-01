@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Parole — Sprachschule mit Wärme. Lerne Sprachen in echten Momenten: beim Bestellen, im Café, beim Reisen. Muttersprachliche Lehrkräfte, kleine Gruppen, persönlicher Plan." />
-<title>Parole — Sprachschule, die nach Urlaub schmeckt</title>
+<meta name="description" content="Linguasud — die grösste private Sprachschule zwischen Schaffhausen und Winterthur. Über 25 Sprachen, kleine Gruppen mit höchstens sechs Personen, muttersprachliche Lehrpersonen, seit 2003." />
+<title>Linguasud — Sprachschule Schaffhausen & Winterthur. Seit 2003.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  /* ===== Reset & Tokens ===== */
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body {
@@ -26,24 +25,22 @@
   button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
   :root {
-    --bg: #FAF6EE;
-    --bg-soft: #F2EBDA;
-    --bg-warm: #F5E6D3;
-    --ink: #1F1813;
-    --ink-soft: #5A4A3C;
-    --ink-muted: #8C7C6B;
-    --line: #E5DCC8;
-    --line-soft: #EFE7D6;
-    --primary: #8B2C2C;
-    --primary-dark: #6B1F1F;
-    --primary-light: #F4D8D8;
-    --accent: #E5A23B;
-    --accent-2: #6F8A3E;
-    --accent-3: #3A6B7C;
-    --shadow-sm: 0 1px 2px rgba(31, 24, 19, 0.06);
-    --shadow-md: 0 6px 18px -6px rgba(31, 24, 19, 0.12), 0 2px 4px -2px rgba(31, 24, 19, 0.06);
-    --shadow-lg: 0 20px 40px -10px rgba(31, 24, 19, 0.18);
-    --shadow-warm: 0 14px 30px -10px rgba(139, 44, 44, 0.25);
+    --bg: #F5F1E8;
+    --bg-soft: #ECE6D5;
+    --bg-warm: #F0E5CE;
+    --ink: #1A2332;
+    --ink-soft: #4A5462;
+    --ink-muted: #7A8290;
+    --line: #DDD3BE;
+    --primary: #B8410E;
+    --primary-dark: #8C2F08;
+    --primary-light: #F2D8C4;
+    --accent: #3D5A40;
+    --accent-2: #6B5B3E;
+    --shadow-sm: 0 1px 2px rgba(26, 35, 50, 0.06);
+    --shadow-md: 0 6px 18px -6px rgba(26, 35, 50, 0.12), 0 2px 4px -2px rgba(26, 35, 50, 0.06);
+    --shadow-lg: 0 20px 40px -10px rgba(26, 35, 50, 0.18);
+    --shadow-warm: 0 14px 30px -10px rgba(184, 65, 14, 0.25);
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
@@ -66,8 +63,8 @@
     margin: 0;
     font-variation-settings: "opsz" 80;
   }
-  h1 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); }
-  h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); }
+  h1 { font-size: clamp(2.4rem, 5.8vw, 4.6rem); }
+  h2 { font-size: clamp(1.9rem, 4.2vw, 3.2rem); }
   h3 { font-size: 1.5rem; }
   p { margin: 0; }
   .hand { font-family: 'Caveat', cursive; font-weight: 600; }
@@ -97,10 +94,9 @@
     font-weight: 700;
     transform: rotate(-3deg);
     letter-spacing: 0.02em;
-    background: rgba(244, 216, 216, 0.4);
+    background: rgba(242, 216, 196, 0.5);
   }
 
-  /* ===== Buttons ===== */
   .btn {
     display: inline-flex;
     align-items: center;
@@ -115,19 +111,14 @@
   }
   .btn-primary {
     background: var(--primary);
-    color: #FAF6EE;
+    color: #F5F1E8;
     box-shadow: var(--shadow-warm);
   }
   .btn-primary:hover {
     background: var(--primary-dark);
     transform: translateY(-2px) rotate(-1deg);
-    box-shadow: 0 18px 36px -10px rgba(139, 44, 44, 0.4);
+    box-shadow: 0 18px 36px -10px rgba(184, 65, 14, 0.4);
   }
-  .btn-dark {
-    background: var(--ink);
-    color: #FAF6EE;
-  }
-  .btn-dark:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
   .btn-ghost {
     color: var(--ink);
     border: 1.5px solid var(--ink);
@@ -142,7 +133,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(250, 246, 238, 0.85);
+    background: rgba(245, 241, 232, 0.85);
     backdrop-filter: saturate(180%) blur(14px);
     -webkit-backdrop-filter: saturate(180%) blur(14px);
     border-bottom: 1px solid transparent;
@@ -150,7 +141,7 @@
   }
   .nav.scrolled {
     border-bottom-color: var(--line);
-    background: rgba(250, 246, 238, 0.95);
+    background: rgba(245, 241, 232, 0.95);
   }
   .nav-inner {
     display: flex;
@@ -161,23 +152,24 @@
   .logo {
     display: flex;
     align-items: baseline;
-    gap: 6px;
+    gap: 8px;
     font-family: 'Fraunces', serif;
     font-size: 1.7rem;
     font-weight: 600;
     letter-spacing: -0.02em;
   }
-  .logo .dot {
-    width: 10px; height: 10px;
-    background: var(--primary);
-    border-radius: 50%;
+  .logo .since {
+    font-family: 'Caveat', cursive;
+    font-size: 1rem;
+    color: var(--ink-muted);
+    font-weight: 500;
+    transform: rotate(-3deg);
     display: inline-block;
-    margin-left: 2px;
-    align-self: center;
+    margin-left: 4px;
   }
   .nav-links {
     display: flex;
-    gap: 36px;
+    gap: 32px;
     list-style: none;
     margin: 0; padding: 0;
   }
@@ -232,7 +224,7 @@
     position: absolute;
     top: -100px; right: -150px;
     width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(229, 162, 59, 0.18), transparent 65%);
+    background: radial-gradient(circle, rgba(184, 65, 14, 0.12), transparent 65%);
     z-index: 0;
   }
   .hero::after {
@@ -240,38 +232,28 @@
     position: absolute;
     bottom: -150px; left: -100px;
     width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(139, 44, 44, 0.12), transparent 65%);
+    background: radial-gradient(circle, rgba(61, 90, 64, 0.10), transparent 65%);
     z-index: 0;
   }
   .hero-grid {
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
     align-items: center;
   }
-  .hero h1 {
-    margin: 28px 0 28px;
-  }
+  .hero h1 { margin: 28px 0 28px; }
   .hero h1 em {
     font-style: italic;
     color: var(--primary);
     font-variation-settings: "opsz" 120;
   }
   .hero-sub {
-    font-size: 1.2rem;
+    font-size: 1.18rem;
     color: var(--ink-soft);
     max-width: 540px;
-    margin-bottom: 20px;
-  }
-  .hero-annotation {
-    font-family: 'Caveat', cursive;
-    font-size: 1.3rem;
-    color: var(--primary);
-    transform: rotate(-2deg);
-    display: inline-block;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
   .hero-cta {
     display: flex;
@@ -280,7 +262,7 @@
     align-items: center;
   }
   .hero-trust {
-    margin-top: 56px;
+    margin-top: 50px;
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
@@ -299,20 +281,20 @@
     line-height: 1;
   }
   .hero-trust-item .lbl {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: var(--ink-soft);
     line-height: 1.3;
   }
 
-  /* Hero — Live chat */
+  /* Hero — Live Chat */
   .hero-chat {
     position: relative;
-    background: #FFFCF5;
+    background: #FCF9F0;
     border: 1.5px solid var(--line);
     border-radius: var(--radius-lg);
     padding: 28px;
     box-shadow: var(--shadow-lg);
-    transform: rotate(1.5deg);
+    transform: rotate(1deg);
     max-width: 460px;
     margin-left: auto;
   }
@@ -321,7 +303,7 @@
     position: absolute;
     top: -12px; right: 30px;
     width: 70px; height: 22px;
-    background: rgba(229, 162, 59, 0.5);
+    background: rgba(184, 65, 14, 0.4);
     transform: rotate(-4deg);
     border-radius: 2px;
   }
@@ -337,7 +319,7 @@
   .chat-avatars > div {
     width: 36px; height: 36px;
     border-radius: 50%;
-    border: 2.5px solid #FFFCF5;
+    border: 2.5px solid #FCF9F0;
     margin-left: -8px;
     display: flex;
     align-items: center;
@@ -348,18 +330,18 @@
   }
   .chat-avatars > div:first-child { margin-left: 0; }
   .chat-avatars .c1 { background: var(--primary); }
-  .chat-avatars .c2 { background: var(--accent-3); }
+  .chat-avatars .c2 { background: var(--accent); }
   .chat-meta strong { display: block; font-size: 0.95rem; }
   .chat-meta span {
     font-size: 0.8rem;
-    color: var(--accent-2);
+    color: var(--accent);
     display: flex;
     align-items: center;
     gap: 4px;
   }
   .chat-meta span::before {
     content: ""; width: 7px; height: 7px;
-    background: var(--accent-2); border-radius: 50%;
+    background: var(--accent); border-radius: 50%;
     animation: pulse 1.6s ease-in-out infinite;
   }
   @keyframes pulse {
@@ -399,20 +381,19 @@
     display: block;
     margin-bottom: 2px;
   }
-  .bubble.translation {
+  .bubble .trans {
     font-size: 0.78rem;
     color: var(--ink-muted);
     font-style: italic;
     margin-top: 4px;
     display: block;
   }
-  .bubble.you .translation { color: rgba(250,246,238,0.65); }
+  .bubble.you .trans { color: rgba(245, 241, 232, 0.65); }
   .bubble:nth-child(2) { animation-delay: 0.3s; }
   .bubble:nth-child(3) { animation-delay: 1.2s; }
   .bubble:nth-child(4) { animation-delay: 2.2s; }
   .bubble:nth-child(5) { animation-delay: 3.2s; }
   .bubble:nth-child(6) { animation-delay: 4.2s; }
-  .bubble:nth-child(7) { animation-delay: 5.2s; }
   @keyframes bubbleIn {
     to { opacity: 1; transform: translateY(0); }
   }
@@ -439,27 +420,27 @@
     30% { transform: translateY(-6px); opacity: 1; }
   }
 
-  /* Floating stickers around hero */
+  /* Floating stickers */
   .floating {
     position: absolute;
     z-index: 2;
     pointer-events: none;
   }
   .floating-1 {
-    top: 20px; left: 8%;
+    top: 20px; left: 4%;
     font-family: 'Caveat', cursive;
-    color: var(--accent-2);
+    color: var(--accent);
     font-size: 1.3rem;
     transform: rotate(-8deg);
     animation: float 5s ease-in-out infinite;
   }
   .floating-2 {
-    bottom: 60px; left: 0;
+    bottom: 80px; left: -10px;
     transform: rotate(-12deg);
     animation: float 6s ease-in-out infinite 0.5s;
   }
   .floating-3 {
-    top: 50%; right: -10px;
+    top: 40%; right: -10px;
     transform: rotate(8deg);
     animation: float 4.5s ease-in-out infinite 1s;
   }
@@ -474,327 +455,355 @@
   /* ===== Sections ===== */
   section { padding: 110px 0; position: relative; }
   .section-head { max-width: 720px; margin: 0 auto 70px; text-align: center; }
-  .section-head.left { text-align: left; margin-left: 0; }
   .section-head h2 { margin: 18px 0 18px; }
   .section-head h2 em { font-style: italic; color: var(--primary); }
   .section-head p { font-size: 1.12rem; color: var(--ink-soft); }
 
-  /* ===== "Momente" section — asymmetric grid ===== */
-  .moments { background: var(--bg); }
-  .moments-grid {
+  /* ===== Sprachen Mosaik ===== */
+  .languages { background: var(--bg); }
+  .lang-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(180px, auto);
+    grid-auto-rows: minmax(170px, auto);
     gap: 18px;
   }
-  .moment {
+  .lang-card {
     background: var(--bg-soft);
     border-radius: var(--radius-md);
-    padding: 28px;
+    padding: 26px;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
+    border: 1.5px solid transparent;
   }
-  .moment:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-  .moment .lang-tag {
-    position: absolute;
-    top: 18px; right: 18px;
-    font-family: 'Caveat', cursive;
-    font-size: 1.1rem;
-    color: var(--primary);
+  .lang-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--primary); }
+  .lang-card .flag {
+    font-size: 2rem;
+    margin-bottom: 12px;
   }
-  .moment .phrase {
+  .lang-card .name {
     font-family: 'Fraunces', serif;
-    font-size: 1.7rem;
-    line-height: 1.2;
-    margin: 32px 0 12px;
-    color: var(--ink);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 6px;
   }
-  .moment .phrase em { color: var(--primary); font-style: italic; }
-  .moment .meaning {
-    font-size: 1rem;
-    color: var(--ink-soft);
-    margin-bottom: 14px;
-  }
-  .moment .pronounce {
+  .lang-card .levels {
     font-family: 'Caveat', cursive;
-    font-size: 1rem;
-    color: var(--accent-2);
+    color: var(--primary);
+    font-size: 1.05rem;
+    margin-bottom: 12px;
   }
-  .moment .context {
-    margin-top: 16px;
-    font-size: 0.85rem;
-    color: var(--ink-muted);
-    padding-top: 12px;
-    border-top: 1px dashed var(--line);
+  .lang-card .meta {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
   }
+  .lang-card .meta strong {
+    display: block;
+    color: var(--ink);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  .lang-card .meta strong:first-child { margin-top: 0; }
 
   /* Asymmetric placement */
-  .m-1 { grid-column: span 3; grid-row: span 2; background: var(--bg-warm); }
-  .m-1 .phrase { font-size: 2.4rem; }
-  .m-2 { grid-column: span 3; }
-  .m-3 { grid-column: span 2; }
-  .m-4 { grid-column: span 2; }
-  .m-5 { grid-column: span 2; background: var(--primary); color: var(--bg); }
-  .m-5 .phrase, .m-5 .meaning, .m-5 .pronounce { color: var(--bg); }
-  .m-5 .phrase em { color: var(--accent); }
-  .m-5 .lang-tag { color: var(--accent); }
-  .m-5 .context { color: rgba(250,246,238,0.6); border-color: rgba(250,246,238,0.2); }
-  .m-6 { grid-column: span 2; }
-  .m-7 { grid-column: span 2; }
-
-  /* ===== "How a lesson feels" — narrative section ===== */
-  .how {
-    background: var(--bg-soft);
-    overflow: hidden;
+  .lc-1 { grid-column: span 3; grid-row: span 2; background: var(--bg-warm); }
+  .lc-1 .name { font-size: 2.4rem; }
+  .lc-2 { grid-column: span 3; }
+  .lc-3 { grid-column: span 2; }
+  .lc-4 { grid-column: span 2; }
+  .lc-5 { grid-column: span 2; }
+  .lc-extra {
+    grid-column: span 6;
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: var(--radius-md);
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
   }
+  .lc-extra strong {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  .lc-extra .extra-list {
+    color: rgba(245, 241, 232, 0.75);
+    font-size: 0.92rem;
+    margin: 6px 0 0;
+  }
+  .lc-extra a {
+    color: var(--bg);
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+    text-underline-offset: 4px;
+  }
+
+  /* ===== Formate / Unterrichtsformen ===== */
+  .formats { background: var(--bg-soft); }
+  .formats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .format {
+    background: #FCF9F0;
+    border-radius: var(--radius-md);
+    padding: 30px 26px;
+    position: relative;
+    transition: all 0.3s;
+    border: 1.5px solid var(--line);
+    display: flex;
+    flex-direction: column;
+  }
+  .format:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--primary); }
+  .format .num {
+    font-family: 'Caveat', cursive;
+    font-size: 2.4rem;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .format h3 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+  }
+  .format p {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    flex: 1;
+  }
+  .format .check-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+  }
+  .format .check-list li {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    padding: 4px 0 4px 22px;
+    position: relative;
+  }
+  .format .check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0; top: 4px;
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  /* ===== Was uns anders macht ===== */
+  .how { overflow: hidden; }
   .how-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    align-items: center;
+    align-items: start;
   }
-  .how-left h2 { margin-bottom: 24px; }
-  .how-left p { font-size: 1.1rem; color: var(--ink-soft); margin-bottom: 32px; }
-  .lesson-steps {
+  .principles {
     display: flex;
     flex-direction: column;
     gap: 24px;
   }
-  .lesson-step {
+  .principle {
     display: flex;
-    gap: 18px;
+    gap: 16px;
     align-items: flex-start;
   }
-  .lesson-step .num {
-    font-family: 'Caveat', cursive;
-    font-size: 2.5rem;
+  .principle .marker {
+    width: 40px; height: 40px;
+    background: var(--primary-light);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     color: var(--primary);
-    line-height: 1;
-    min-width: 40px;
+    font-weight: 700;
   }
-  .lesson-step h3 {
+  .principle h3 {
     font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.12rem;
     font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .principle p { color: var(--ink-soft); font-size: 0.96rem; line-height: 1.55; }
+
+  /* Service-Panel */
+  .service-panel {
+    background: #FCF9F0;
+    border-radius: var(--radius-md);
+    padding: 36px 32px;
+    box-shadow: var(--shadow-md);
+    border: 1.5px solid var(--line);
+  }
+  .service-panel h3 {
+    font-family: 'Caveat', cursive;
+    color: var(--primary);
+    font-size: 1.4rem;
     margin-bottom: 4px;
   }
-  .lesson-step p { color: var(--ink-soft); font-size: 0.97rem; }
-
-  /* Right side: a "lesson notebook" */
-  .notebook {
-    background: #FFFCF5;
-    border-radius: var(--radius-md);
-    padding: 40px 36px;
-    box-shadow: var(--shadow-lg);
-    border: 1.5px solid var(--line);
-    position: relative;
-    transform: rotate(-1.5deg);
-  }
-  .notebook::before {
-    content: "";
-    position: absolute;
-    top: 16px; left: 16px; right: 16px; bottom: 16px;
-    border: 1.5px dashed var(--line);
-    border-radius: 12px;
-    pointer-events: none;
-  }
-  .notebook-title {
-    font-family: 'Caveat', cursive;
-    font-size: 1.7rem;
-    color: var(--primary);
-    margin-bottom: 8px;
-  }
-  .notebook-sub {
-    font-size: 0.85rem;
+  .service-panel .panel-sub {
+    font-size: 0.88rem;
     color: var(--ink-muted);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
-  .notebook-dialog {
+  .service-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
+    gap: 16px;
+  }
+  .service-list li {
+    display: flex;
     gap: 14px;
-  }
-  .n-line {
-    display: flex;
-    gap: 12px;
     align-items: flex-start;
-  }
-  .n-line .who {
-    font-family: 'Caveat', cursive;
-    font-size: 1.1rem;
-    color: var(--accent-2);
-    min-width: 64px;
-    font-weight: 600;
-  }
-  .n-line .text {
-    font-family: 'Fraunces', serif;
-    font-size: 1.05rem;
-    line-height: 1.5;
-  }
-  .n-line .text em { color: var(--primary); font-style: italic; }
-  .n-line .note {
-    display: block;
-    font-family: 'Caveat', cursive;
-    font-size: 0.95rem;
-    color: var(--accent);
-    margin-top: 2px;
-  }
-  .notebook-footer {
-    margin-top: 28px;
-    padding-top: 18px;
-    border-top: 1.5px dashed var(--line);
-    font-family: 'Caveat', cursive;
-    color: var(--ink-soft);
-    font-size: 1.05rem;
-    text-align: center;
-  }
-
-  /* ===== Formats section — 3 different cards ===== */
-  .formats-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
-    gap: 22px;
-    align-items: stretch;
-  }
-  .format {
-    background: var(--bg-soft);
-    border-radius: var(--radius-lg);
-    padding: 36px 32px;
-    position: relative;
-    transition: all 0.3s;
-    border: 1.5px solid transparent;
-    display: flex;
-    flex-direction: column;
-  }
-  .format:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-  .format-tall { background: var(--primary); color: var(--bg); }
-  .format-tall h3, .format-tall .price-num { color: var(--bg); }
-  .format-tall .price span, .format-tall .format-features li { color: rgba(250,246,238,0.75); }
-  .format-tall .format-features li::before { background: var(--accent); }
-  .format-tall .stamp { color: var(--bg); border-color: var(--bg); background: rgba(250,246,238,0.1); }
-
-  .format .badge {
-    position: absolute;
-    top: -14px; right: 24px;
-  }
-  .format h3 { margin-bottom: 10px; }
-  .format-desc { font-size: 0.97rem; margin-bottom: 24px; color: var(--ink-soft); }
-  .format-tall .format-desc { color: rgba(250,246,238,0.8); }
-  .format .price {
-    display: flex; align-items: baseline; gap: 4px;
-    padding-bottom: 22px; margin-bottom: 22px;
+    padding-bottom: 16px;
     border-bottom: 1.5px dashed var(--line);
   }
-  .format-tall .price { border-bottom-color: rgba(250,246,238,0.2); }
-  .price-num {
-    font-family: 'Fraunces', serif;
-    font-size: 2.4rem;
-    font-weight: 500;
-    line-height: 1;
-  }
-  .price span { font-size: 0.95rem; color: var(--ink-soft); }
-  .format-features {
-    list-style: none; margin: 0 0 28px; padding: 0; flex: 1;
-  }
-  .format-features li {
-    padding: 6px 0 6px 24px;
-    position: relative;
-    font-size: 0.95rem;
-    color: var(--ink-soft);
-  }
-  .format-features li::before {
-    content: ""; position: absolute; left: 0; top: 14px;
-    width: 8px; height: 8px;
-    background: var(--primary);
+  .service-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .service-list .check {
+    width: 28px; height: 28px;
+    background: var(--accent);
+    color: #FCF9F0;
     border-radius: 50%;
-  }
-  .format .btn { width: 100%; }
-
-  /* ===== Voices — testimonial postcards ===== */
-  .voices { background: var(--bg-soft); position: relative; }
-  .voices::before {
-    content: "✦  ✦  ✦";
-    position: absolute;
-    top: 60px; left: 0; right: 0;
-    text-align: center;
-    color: var(--accent);
-    letter-spacing: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
     font-size: 0.9rem;
   }
-  .voices-grid {
+  .service-list strong { display: block; margin-bottom: 2px; }
+  .service-list span { color: var(--ink-soft); font-size: 0.92rem; }
+
+  /* ===== Ablauf / 5 Schritte ===== */
+  .ablauf { background: var(--bg-soft); }
+  .steps {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    position: relative;
   }
-  .postcard {
-    background: #FFFCF5;
+  .step {
+    text-align: center;
+    padding: 0 12px;
+    position: relative;
+  }
+  .step:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -12px; top: 28px;
+    color: var(--primary);
+    font-size: 1.4rem;
+    opacity: 0.5;
+  }
+  .step-num {
+    width: 56px; height: 56px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .step h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .step p { color: var(--ink-soft); font-size: 0.9rem; }
+
+  /* ===== Standorte ===== */
+  .locations-section { background: var(--bg); }
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .location-card {
+    background: #FCF9F0;
     border-radius: var(--radius-md);
     padding: 32px 28px;
-    box-shadow: var(--shadow-md);
-    position: relative;
     border: 1.5px solid var(--line);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
   }
-  .postcard:hover { transform: translateY(-4px) rotate(-0.5deg); }
-  .postcard:nth-child(1) { transform: rotate(-1.5deg); }
-  .postcard:nth-child(2) { transform: rotate(1deg); }
-  .postcard:nth-child(3) { transform: rotate(-0.5deg); }
-  .postcard:nth-child(1):hover { transform: translateY(-4px) rotate(-1.5deg); }
-  .postcard:nth-child(2):hover { transform: translateY(-4px) rotate(1deg); }
-  .postcard:nth-child(3):hover { transform: translateY(-4px) rotate(-0.5deg); }
-
-  .postcard .postmark {
-    position: absolute;
-    top: 18px; right: 18px;
-    width: 60px; height: 60px;
-    border: 2px solid var(--primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Caveat', cursive;
-    font-size: 0.75rem;
-    color: var(--primary);
-    line-height: 1;
-    transform: rotate(15deg);
-    opacity: 0.7;
+  .location-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .location-card .stamp {
+    margin-bottom: 16px;
   }
-  .postcard .quote {
+  .location-card h3 {
     font-family: 'Fraunces', serif;
-    font-size: 1.15rem;
-    line-height: 1.5;
+    font-size: 1.7rem;
+    margin-bottom: 16px;
+  }
+  .location-info {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .location-info strong {
     color: var(--ink);
-    margin-bottom: 24px;
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .location-info strong:first-child { margin-top: 0; }
+  .location-info a {
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary-light);
+  }
+  .location-info a:hover { color: var(--primary-dark); border-bottom-color: var(--primary); }
+  .location-info .red { color: red; font-weight: 600; }
+  .opening-hours {
+    margin: 6px 0 0;
+  }
+  .opening-hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    padding: 2px 0;
+  }
+  .opening-hours-row .day { font-weight: 500; color: var(--ink); }
+  .opening-hours-note {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+    font-size: 0.88rem;
+    color: var(--ink-soft);
     font-style: italic;
   }
-  .postcard .signature {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding-top: 20px;
-    border-top: 1.5px dashed var(--line);
-  }
-  .postcard .avatar {
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 600;
-  }
-  .postcard .who { font-weight: 600; font-size: 0.95rem; }
-  .postcard .what { font-size: 0.85rem; color: var(--ink-soft); }
 
-  /* ===== CTA — character not contact ===== */
-  .cta-section { padding: 80px 0 120px; }
+  /* ===== CTA ===== */
+  .cta-section { padding: 100px 0; }
   .cta-box {
     background: var(--ink);
     color: var(--bg);
     border-radius: var(--radius-xl);
-    padding: 90px 60px;
+    padding: 80px 60px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -803,25 +812,26 @@
     content: ""; position: absolute; border-radius: 50%;
     opacity: 0.08;
   }
-  .cta-box::before { width: 400px; height: 400px; background: var(--accent); top: -150px; right: -100px; }
-  .cta-box::after { width: 300px; height: 300px; background: var(--primary); bottom: -120px; left: -80px; }
+  .cta-box::before { width: 400px; height: 400px; background: var(--primary); top: -150px; right: -100px; }
+  .cta-box::after { width: 300px; height: 300px; background: var(--accent); bottom: -120px; left: -80px; }
   .cta-box > * { position: relative; z-index: 1; }
-  .cta-box .stamp { color: var(--accent); border-color: var(--accent); background: transparent; margin-bottom: 28px; }
+  .cta-box .stamp { color: var(--primary); border-color: var(--primary); background: transparent; margin-bottom: 24px; }
   .cta-box h2 { color: var(--bg); margin-bottom: 18px; }
-  .cta-box h2 em { color: var(--accent); font-style: italic; }
-  .cta-box p { font-size: 1.18rem; color: rgba(250,246,238,0.8); max-width: 580px; margin: 0 auto 36px; }
+  .cta-box h2 em { color: var(--primary); font-style: italic; }
+  .cta-box p { font-size: 1.15rem; color: rgba(245, 241, 232, 0.8); max-width: 580px; margin: 0 auto 32px; }
   .cta-box .btn-primary {
-    background: var(--accent);
-    color: var(--ink);
-    box-shadow: 0 12px 24px -8px rgba(229, 162, 59, 0.5);
+    background: var(--primary);
+    color: var(--bg);
+    box-shadow: 0 12px 24px -8px rgba(184, 65, 14, 0.5);
   }
-  .cta-box .btn-primary:hover { background: #F2B048; transform: translateY(-2px) rotate(-1deg); }
+  .cta-box .btn-primary:hover { background: var(--primary-dark); }
   .cta-meta {
-    margin-top: 24px;
+    margin-top: 20px;
     font-family: 'Caveat', cursive;
-    color: rgba(250,246,238,0.55);
+    color: rgba(245, 241, 232, 0.55);
     font-size: 1.15rem;
   }
+  .cta-meta a { color: rgba(245, 241, 232, 0.85); border-bottom: 1px solid var(--primary); }
 
   /* ===== Footer ===== */
   footer {
@@ -860,22 +870,6 @@
     font-size: 0.88rem;
     color: var(--ink-soft);
   }
-  .footer-bottom .heart { color: var(--primary); }
-  .socials { display: flex; gap: 10px; }
-  .socials a {
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    background: transparent;
-    border: 1.5px solid var(--line);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-    color: var(--ink-soft);
-    font-family: 'Caveat', cursive;
-    font-size: 1.1rem;
-  }
-  .socials a:hover { background: var(--primary); color: var(--bg); border-color: var(--primary); }
 
   /* ===== Animations ===== */
   .reveal {
@@ -890,20 +884,19 @@
   .reveal-d4 { transition-delay: 0.4s; }
 
   /* ===== Responsive ===== */
-  @media (max-width: 980px) {
+  @media (max-width: 1000px) {
     .hero-grid { grid-template-columns: 1fr; gap: 60px; }
-    .hero-chat { margin: 0 auto; transform: rotate(0); }
+    .hero-card { margin: 0 auto; transform: rotate(0); }
     .how-grid { grid-template-columns: 1fr; gap: 60px; }
-    .notebook { transform: rotate(0); }
-    .moments-grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: auto;
-    }
-    .m-1, .m-2, .m-3, .m-4, .m-5, .m-6, .m-7 { grid-column: span 1; grid-row: auto; }
-    .m-1 .phrase { font-size: 1.8rem; }
-    .formats-grid { grid-template-columns: 1fr; }
-    .voices-grid { grid-template-columns: 1fr; }
-    .postcard { transform: rotate(0) !important; }
+    .lang-grid { grid-template-columns: repeat(2, 1fr); }
+    .lc-1, .lc-2, .lc-3, .lc-4, .lc-5 { grid-column: span 1; grid-row: auto; }
+    .lc-1 .name { font-size: 1.8rem; }
+    .lc-extra { grid-column: span 2; }
+    .formats-grid { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: repeat(2, 1fr); gap: 32px 16px; }
+    .step::after { display: none; }
+    .locations-grid { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto; }
+    .cta-box { padding: 60px 32px; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 720px) {
@@ -928,14 +921,11 @@
     .floating-1, .floating-2, .floating-3 { display: none; }
     .hero-trust { gap: 28px; }
     .hero-trust-item .num { font-size: 1.8rem; }
-    .cta-box { padding: 60px 28px; }
+    .lang-grid { grid-template-columns: 1fr; }
+    .lc-extra { grid-column: span 1; flex-direction: column; align-items: flex-start; }
+    .formats-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; gap: 36px; }
     .footer-bottom { justify-content: center; text-align: center; }
-  }
-  @media (max-width: 480px) {
-    .moments-grid { grid-template-columns: 1fr; }
-    .hero-chat { padding: 20px; }
-    .bubble { font-size: 0.88rem; }
   }
 </style>
 </head>
@@ -944,17 +934,17 @@
 <!-- ===== NAV ===== -->
 <nav class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="#" class="logo">parole<span class="dot"></span></a>
+    <a href="#" class="logo">linguasud<span class="since">seit 2003</span></a>
     <ul class="nav-links">
-      <li><a href="#moments">Momente</a></li>
-      <li><a href="#how">So läuft's</a></li>
-      <li><a href="#formats">Formate</a></li>
-      <li><a href="#voices">Stimmen</a></li>
-      <li><a href="#contact">Kontakt</a></li>
+      <li><a href="#languages">Sprachen</a></li>
+      <li><a href="#formats">Unterricht</a></li>
+      <li><a href="#how">Qualität</a></li>
+      <li><a href="#ablauf">Ablauf</a></li>
+      <li><a href="#locations">Standorte</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="#" class="login">Anmelden</a>
-      <a href="#contact" class="btn btn-primary">Probestunde</a>
+      <a href="tel:+41526204438" class="login">052 620 44 38</a>
+      <a href="#contact" class="btn btn-primary">Probelektion</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menü"><span></span></button>
     </div>
   </div>
@@ -964,28 +954,27 @@
 <header class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="eyebrow reveal">Sprachschule mit Wärme · seit 2014</span>
-      <h1 class="reveal reveal-d1">Lerne Sprachen,<br/>die nach <em>Urlaub</em><br/>schmecken.</h1>
+      <span class="eyebrow reveal">Private Sprachschule · Schaffhausen &amp; Winterthur</span>
+      <h1 class="reveal reveal-d1">Die grösste private<br/>Sprachschule zwischen<br/>Schaffhausen und Winterthur.<br/><em>Seit 2003.</em></h1>
       <p class="hero-sub reveal reveal-d2">
-        Parole ist eine kleine Sprachschule mit Charakter. Bei uns lernst du Vokabeln, die du am nächsten Tag wirklich brauchst — beim Bestellen, im Café, beim Flirten in Lissabon.
+        Linguasud wurde 2003 von Bernadette Hübscher gegründet und ist heute die grösste private Sprachschule im Raum Schaffhausen-Winterthur. Über 25 Sprachen, kleine Gruppen mit höchstens sechs Personen, und qualifizierte muttersprachliche oder gleichwertige Lehrpersonen.
       </p>
-      <span class="hero-annotation reveal reveal-d2">— keine graue Theorie, versprochen.</span>
       <div class="hero-cta reveal reveal-d3">
-        <a href="#contact" class="btn btn-primary">Probestunde buchen <span class="arrow">→</span></a>
-        <a href="#how" class="btn btn-ghost">Wie läuft eine Stunde ab?</a>
+        <a href="#contact" class="btn btn-primary">Kostenlose Probelektion <span class="arrow">→</span></a>
+        <a href="#languages" class="btn btn-ghost">Welche Sprache?</a>
       </div>
       <div class="hero-trust reveal reveal-d4">
         <div class="hero-trust-item">
-          <div class="num">4,9</div>
-          <div class="lbl">⭐ von 2.134<br/>Bewertungen</div>
+          <div class="num">25+</div>
+          <div class="lbl">Sprachen<br/>im Angebot</div>
         </div>
         <div class="hero-trust-item">
-          <div class="num">12</div>
-          <div class="lbl">Sprachen<br/>im Studio</div>
+          <div class="num">6</div>
+          <div class="lbl">max. Teilnehmer<br/>je Gruppe</div>
         </div>
         <div class="hero-trust-item">
-          <div class="num">96%</div>
-          <div class="lbl">bleiben<br/>über 1 Jahr</div>
+          <div class="num">23</div>
+          <div class="lbl">Jahre<br/>Erfahrung</div>
         </div>
       </div>
     </div>
@@ -993,270 +982,345 @@
     <div class="hero-chat reveal reveal-d2">
       <div class="chat-header">
         <div class="chat-avatars">
-          <div class="c1">S</div>
-          <div class="c2">L</div>
+          <div class="c1">L</div>
+          <div class="c2">S</div>
         </div>
         <div class="chat-meta">
-          <strong>Sofía & Lena</strong>
-          <span>Spanisch · gerade live</span>
+          <strong>Lehrkraft &amp; Teilnehmer</strong>
+          <span>Französisch · gerade live</span>
         </div>
       </div>
       <div class="bubble them">
-        <span class="label">Sofía</span>
-        ¿Qué te apetece hacer este finde?
-        <span class="translation">— Was möchtest du am Wochenende machen?</span>
+        <span class="label">Lehrkraft</span>
+        Bonjour! Comment allez-vous aujourd'hui?
+        <span class="trans">— Guten Tag! Wie geht es Ihnen heute?</span>
       </div>
       <div class="bubble you">
-        <span class="label">Lena</span>
-        Me gustaría ir a la playa.
-        <span class="translation">— Ich würde gern an den Strand gehen.</span>
+        <span class="label">Teilnehmer</span>
+        Ça va bien, merci. Et vous?
+        <span class="trans">— Mir geht es gut, danke. Und Ihnen?</span>
       </div>
       <div class="bubble them">
-        <span class="label">Sofía</span>
-        ¡Buena idea! Hay una cala escondida cerca de Valencia…
-        <span class="translation">— Gute Idee! Es gibt eine versteckte Bucht nahe Valencia…</span>
+        <span class="label">Lehrkraft</span>
+        Très bien! Aujourd'hui, on parle du voyage. Vous avez计划的 quelque chose récemment?
+        <span class="trans">— Sehr gut! Heute sprechen wir über Reisen. Haben Sie kürzlich etwas geplant?</span>
+      </div>
+      <div class="bubble you">
+        <span class="label">Teilnehmer</span>
+        Oui, je veux aller à Lyon au printemps prochain.
+        <span class="trans">— Ja, ich möchte im Frühling nach Lyon fahren.</span>
       </div>
       <div class="typing" aria-hidden="true"><span></span><span></span><span></span></div>
     </div>
 
-    <div class="floating floating-1 hand">¡hola, Lena!</div>
-    <div class="floating floating-2"><span class="stamp">muttersprachlich</span></div>
-    <div class="floating floating-3 hand">merci 🥐</div>
+    <div class="floating floating-1 hand">seit 2003 in Schaffhausen</div>
+    <div class="floating floating-2"><span class="stamp">kostenlose Probelektion</span></div>
+    <div class="floating floating-3 hand">A1 bis C2</div>
   </div>
 </header>
 
-<!-- ===== MOMENTE ===== -->
-<section class="moments" id="moments">
+<!-- ===== SPRACHEN ===== -->
+<section class="languages" id="languages">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Was du bei uns lernst</span>
-      <h2>Kleine Sätze, <em>große Wirkung.</em></h2>
-      <p>Wir unterrichten keine Liste von 2.000 Vokabeln. Wir bringen dir die Sätze bei, die du am Dienstag in der Bar in Sevilla, am Sonntag in der Métro in Paris, oder beim Vorstellungsgespräch in Mailand wirklich brauchst.</p>
+      <span class="eyebrow">Kursangebot</span>
+      <h2>Fünf <em>Kernsprachen</em> — und zwanzig weitere auf Anfrage.</h2>
+      <p>Wir führen regelmässig Kurse in den folgenden fünf Sprachen, von A1 bis C2, mit Prüfungsvorbereitung für die grossen internationalen Zertifikate. Wenn deine Wunschsprache nicht in dieser Liste ist: frag uns einfach — wir haben für über 25 Sprachen die passende Lehrperson.</p>
     </div>
 
-    <div class="moments-grid">
-      <div class="moment m-1 reveal">
-        <span class="lang-tag">🇪🇸 Spanisch</span>
-        <div class="phrase">Una caña, <em>por favor.</em></div>
-        <div class="meaning">Ein kleines Bier, bitte.</div>
-        <div class="pronounce">/ˈu.na ˈka.na por faˈβor/</div>
-        <div class="context">Situation: Du sitzt in einer Tapas-Bar in Granada, die Karte ist auf Spanisch, und du willst dich trauen.</div>
+    <div class="lang-grid">
+      <div class="lang-card lc-1 reveal">
+        <div class="flag">🇩🇪</div>
+        <div class="name">Deutsch</div>
+        <div class="levels">A1 — C2</div>
+        <div class="meta">
+          <strong>Zielgruppe</strong>
+          Integration, Beruf, Alltag in der Deutschschweiz.
+          <strong>Besonderheit</strong>
+          Hochdeutsch mit Sensibilität für den Schweizer Kontext.
+          <strong>Prüfungen</strong>
+          Goethe-Zertifikate, telc.
+          <strong>Format</strong>
+          Fortlaufende Kurse, Einstieg jederzeit möglich.
+        </div>
       </div>
 
-      <div class="moment m-2 reveal reveal-d1">
-        <span class="lang-tag">🇫🇷 Französisch</span>
-        <div class="phrase">Je peux avoir l'addition, s'il vous plaît?</div>
-        <div class="meaning">Die Rechnung, bitte?</div>
-        <div class="pronounce">/ʒə pø a.vwaʁ l‿a.di.sjɔ̃ sil vu plɛ/</div>
+      <div class="lang-card lc-2 reveal reveal-d1">
+        <div class="flag">🇬🇧</div>
+        <div class="name">Englisch</div>
+        <div class="levels">A1 — C2</div>
+        <div class="meta">
+          <strong>Zielgruppe</strong>
+          Business, Travel, General English.
+          <strong>Prüfungen</strong>
+          Cambridge (FIRST, ADVANCED, PROFICIENCY).
+          <strong>Format</strong>
+          Flexible Gruppen- und Einzelkurse.
+        </div>
       </div>
 
-      <div class="moment m-3 reveal reveal-d2">
-        <span class="lang-tag">🇮🇹 Italienisch</span>
-        <div class="phrase">È buonissimo!</div>
-        <div class="meaning">Das ist richtig gut!</div>
+      <div class="lang-card lc-3 reveal reveal-d2">
+        <div class="flag">🇫🇷</div>
+        <div class="name">Französisch</div>
+        <div class="levels">A1 — C2</div>
+        <div class="meta">
+          <strong>Zielgruppe</strong>
+          Wiedereinsteiger, Berufstätige, Schüler.
+          <strong>Methodik</strong>
+          Kommunikativer Ansatz, hoher Sprechanteil.
+          <strong>Prüfungen</strong>
+          DELF, DALF.
+        </div>
       </div>
 
-      <div class="moment m-4 reveal reveal-d3">
-        <span class="lang-tag">🇬🇧 Englisch</span>
-        <div class="phrase">I was wondering if you'd be open to a quick chat?</div>
-        <div class="meaning">Hätten Sie kurz Zeit für ein Gespräch?</div>
+      <div class="lang-card lc-4 reveal reveal-d3">
+        <div class="flag">🇮🇹</div>
+        <div class="name">Italienisch</div>
+        <div class="levels">A1 — C2</div>
+        <div class="meta">
+          <strong>Zielgruppe</strong>
+          Hobby, Beruf (Tessin-Bezug), Kulturinteressierte.
+          <strong>Special</strong>
+          Kultureller Einblick: Gestik, Landeskunde.
+          <strong>Prüfungen</strong>
+          CILS, CELI.
+        </div>
       </div>
 
-      <div class="moment m-5 reveal reveal-d4">
-        <span class="lang-tag">🇯🇵 Japanisch</span>
-        <div class="phrase"> Sumimasen, <em>eigo o hanasemasu ka?</em></div>
-        <div class="meaning">Entschuldigung, spricht hier jemand Englisch?</div>
-        <div class="pronounce">/su.mi.ma.sen/</div>
-        <div class="context">Die wichtigste Rettungs-Phrase in Tokio. Funktioniert immer.</div>
+      <div class="lang-card lc-5 reveal reveal-d4">
+        <div class="flag">🇪🇸</div>
+        <div class="name">Spanisch</div>
+        <div class="levels">A1 — C2</div>
+        <div class="meta">
+          <strong>Varianten</strong>
+          Castellano oder Lateinamerikanisch.
+          <strong>Methodik</strong>
+          Dynamisch, interaktiv, viel Konversation.
+          <strong>Prüfungen</strong>
+          DELE (Instituto Cervantes).
+        </div>
       </div>
 
-      <div class="moment m-6 reveal">
-        <span class="lang-tag">🇵🇹 Portugiesisch</span>
-        <div class="phrase">Onde fica a praia?</div>
-        <div class="meaning">Wo ist der Strand?</div>
-      </div>
-
-      <div class="moment m-7 reveal reveal-d1">
-        <span class="lang-tag">🇩🇪 Deutsch</span>
-        <div class="phrase">Können wir das später besprechen?</div>
-        <div class="meaning">— small talk, der Zeit verschafft.</div>
+      <div class="lc-extra reveal">
+        <div>
+          <strong>+ 20 weitere Sprachen</strong>
+          <div class="extra-list">Albanisch · Arabisch · Chinesisch (Mandarin) · Dänisch · Griechisch · Hebräisch · Japanisch · Kroatisch · Niederländisch · Norwegisch · Polnisch · Portugiesisch · Rätoromanisch · Rumänisch · Russisch · Schwedisch · Schweizerdeutsch · Serbisch · Slowakisch · Swahili · Tschechisch · Türkisch · Ukrainisch · Ungarisch · Vietnamesisch</div>
+        </div>
+        <a href="#contact">Alle Sprachen anfragen →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== HOW IT FEELS ===== -->
-<section class="how" id="how">
-  <div class="container how-grid">
-    <div class="how-left reveal">
-      <span class="eyebrow">So fühlt sich eine Stunde an</span>
-      <h2>Kein Schul-<em>unterricht.</em><br/>Eher ein Gespräch unter Freunden — nur auf Spanisch.</h2>
-      <p>Unsere Stunden sind klein, intensiv, und voller echter Momente. Du wirst nicht 45 Minuten lang Grammatik-Tafeln anschauen. Du wirst mit deiner Lehrkraft reden, lachen, und ab und zu über ein Wort stolpern. So lernt das Gehirn Sprache.</p>
-      <div class="lesson-steps">
-        <div class="lesson-step">
-          <div class="num">5'</div>
-          <div>
-            <h3>Ankommen &amp; Aufwärmen</h3>
-            <p>Kurzer Plausch — wie war dein Tag, was ist passiert. Wir sprechen sofort in der Zielsprache.</p>
-          </div>
-        </div>
-        <div class="lesson-step">
-          <div class="num">20'</div>
-          <div>
-            <h3>Neues Material</h3>
-            <p>Ein kurzer Text, ein Hör-Snippet, oder ein Szenario. Etwas, das dich interessiert.</p>
-          </div>
-        </div>
-        <div class="lesson-step">
-          <div class="num">25'</div>
-          <div>
-            <h3>Üben, üben, üben</h3>
-            <p>Dialog-Rollen, Mini-Debatten, Aussprache-Drills. Aktiv sprechen — kein passives Zuhören.</p>
-          </div>
-        </div>
-        <div class="lesson-step">
-          <div class="num">5'</div>
-          <div>
-            <h3>Hausaufgabe mit Geschmack</h3>
-            <p>Ein Rezept auf Italienisch lesen. Einen Songtext übersetzen. Einen 5-Sätze-Tagebuch-Eintrag schreiben.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="notebook reveal reveal-d1">
-      <div class="notebook-title">Heute, 18:30 — Spanisch B1.2</div>
-      <div class="notebook-sub">con Sofía, 12. Lektion von 24</div>
-      <div class="notebook-dialog">
-        <div class="n-line">
-          <div class="who">Sofía:</div>
-          <div class="text">Cuéntame algo <em>divertido</em> que te pasó esta semana.</div>
-        </div>
-        <div class="n-line">
-          <div class="who">Lena:</div>
-          <div class="text">El martes me perdí en el metro… <em>¡pero encontré una cafetería increíble!</em><span class="note">→ gute Struktur, kleiner Fehler mit dem Imperfekt</span></div>
-        </div>
-        <div class="n-line">
-          <div class="who">Sofía:</div>
-          <div class="text">¡Eso es lo mejor de perderse! ¿Qué tomaste?</div>
-        </div>
-        <div class="n-line">
-          <div class="who">Lena:</div>
-          <div class="text">Un <em>café con leche</em> y una <em>tostada con tomate</em>.<span class="note">→ flüssig, perfekt ausgesprochen ✨</span></div>
-        </div>
-        <div class="n-line">
-          <div class="who">Sofía:</div>
-          <div class="text">Eso suena como un domingo en Madrid. <em>Vamos a practicar más</em> este vocabulario.</div>
-        </div>
-      </div>
-      <div class="notebook-footer">
-        ✏️ Hausaufgabe: Einen kurzen Text über dein Lieblingscafé schreiben. 80–100 Wörter.
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FORMATS ===== -->
-<section id="formats">
+<!-- ===== UNTERRICHTSFORMEN ===== -->
+<section class="formats" id="formats">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Drei Wege zu lernen</span>
-      <h2>Wähle, was zu <em>deinem Leben</em> passt.</h2>
-      <p>Manche wollen den Spanisch-Sprint vor dem Urlaub. Manche zwei Jahre lang Japanisch lernen. Beides ist okay.</p>
+      <span class="eyebrow">Unterrichtsformen</span>
+      <h2>Vier Wege,<br/>wie der Unterricht zu dir passt.</h2>
+      <p>Egal ob im Schulzimmer, am Küchentisch oder im Büro — wir bringen den Unterricht dorthin, wo du bist.</p>
     </div>
     <div class="formats-grid">
-      <div class="format format-tall reveal">
-        <div class="badge"><span class="stamp">am beliebtesten</span></div>
-        <h3>Intensiv-Paket</h3>
-        <p class="format-desc">10 Einzelstunden mit deiner Wunsch-Lehrkraft. Persönlicher Plan, Hausaufgaben-Betreuung, und eine kleine Überraschung nach Lektion 5.</p>
-        <div class="price">
-          <div class="price-num">249€</div>
-          <span>/ 10 × 60 Min.</span>
-        </div>
-        <ul class="format-features">
-          <li>10 Stunden, flexibel einteilbar</li>
-          <li>Persönlicher Lernplan &amp; Einstufung</li>
-          <li>Wöchentliche Hausaufgaben mit Feedback</li>
-          <li>Fortschritts-Dashboard</li>
-          <li>1 × 30 Min. Notfall-Slot pro Monat</li>
-          <li>Eine kleine Überraschung. Versprochen.</li>
+      <div class="format reveal">
+        <div class="num">01</div>
+        <h3>Gruppenkurse</h3>
+        <p>Maximal sechs Teilnehmer pro Gruppe — intensive Betreuung, ohne dass der Spass zu kurz kommt. Bei fortlaufenden Kursen ist ein laufender Einstieg möglich, du musst nicht auf den Semesterstart warten.</p>
+        <ul class="check-list">
+          <li>A1 bis C2</li>
+          <li>Laufender Einstieg</li>
+          <li>Fortlaufende Kurse</li>
         </ul>
-        <a href="#contact" class="btn btn-primary">Paket wählen <span class="arrow">→</span></a>
       </div>
-
       <div class="format reveal reveal-d1">
-        <h3>Drop-in</h3>
-        <p class="format-desc">Eine Stunde, ganz ohne Verpflichtung. Schnuppern, ausprobieren, weitermachen — oder auch nicht.</p>
-        <div class="price">
-          <div class="price-num">29€</div>
-          <span>/ 60 Min.</span>
-        </div>
-        <ul class="format-features">
-          <li>Einzel- oder Gruppenstunde</li>
-          <li>Jederzeit online buchen</li>
-          <li>Keine Mindestlaufzeit</li>
+        <div class="num">02</div>
+        <h3>Einzel- &amp; Partnerkurse</h3>
+        <p>Maximale Flexibilität bei Terminen und Inhalten. Unterricht in unseren Schulräumen, online oder bei dir im Unternehmen. Partnerkurse zu zweit sind günstiger als Einzel und freier als die Gruppe.</p>
+        <ul class="check-list">
+          <li>Höchste Lerneffizienz</li>
+          <li>Inhalte nach Wunsch</li>
+          <li>Ort frei wählbar</li>
         </ul>
-        <a href="#contact" class="btn btn-ghost">Stunde buchen</a>
       </div>
-
       <div class="format reveal reveal-d2">
-        <h3>Jahres-Mitglied</h3>
-        <p class="format-desc">Du hast ein echtes Ziel — C1 für den Job, ein Studium im Ausland, ein langer Aufenthalt. Wir gehen die Strecke mit dir.</p>
-        <div class="price">
-          <div class="price-num">99€</div>
-          <span>/ Monat</span>
-        </div>
-        <ul class="format-features">
-          <li>4 Stunden pro Monat inklusive</li>
-          <li>Quartals-Fortschrittsgespräch</li>
-          <li>Zertifikats-Vorbereitung inkl.</li>
-          <li>12 Monate Laufzeit</li>
+        <div class="num">03</div>
+        <h3>Firmenkurse (Inhouse)</h3>
+        <p>Massgeschneiderte Kurse direkt im Unternehmen. Branchenspezifisches Vokabular und Rollenspiele aus dem Arbeitsalltag. Wenig Ausfallzeit für die Mitarbeitenden, flexible Planung.</p>
+        <ul class="check-list">
+          <li>Im Unternehmen vor Ort</li>
+          <li>Individuelle Inhalte</li>
+          <li>Ideal für Teams</li>
         </ul>
-        <a href="#contact" class="btn btn-ghost">Beratung</a>
+      </div>
+      <div class="format reveal reveal-d3">
+        <div class="num">04</div>
+        <h3>Online-Unterricht</h3>
+        <p>Linguasud Online: Live-Unterricht per Video-Call mit denselben qualifizierten Lehrpersonen wie im Präsenzunterricht. Ortsunabhängig, ohne Anfahrtswege, mit flexiblen Zeiten.</p>
+        <ul class="check-list">
+          <li>Alle Hauptsprachen</li>
+          <li>Hybrid mit Präsenz kombinierbar</li>
+          <li>Viele weitere Sprachen auf Anfrage</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== VOICES ===== -->
-<section class="voices" id="voices">
+<!-- ===== WAS UNS ANDERS MACHT ===== -->
+<section class="how" id="how">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Postkarten aus dem Unterricht</span>
-      <h2>Was unsere <em>Lernenden</em> erzählen.</h2>
+      <span class="eyebrow">Qualität &amp; Service</span>
+      <h2>Was bei Linguasud <em>selbstverständlich</em> dazugehört.</h2>
+      <p>Vier Punkte, die unseren Unterricht prägen — von der Gruppengrösse über die Methodik bis zu den kostenlosen Erstleistungen.</p>
     </div>
-    <div class="voices-grid">
-      <div class="postcard reveal">
-        <div class="postmark">3 Monate · B1 erreicht</div>
-        <p class="quote">„Ich hab im Mai in Barcelona einen Taxifahrer nach dem Weg gefragt. Er hat geantwortet, ich hab geantwortet, wir haben gelacht. Ich hab vergessen, dass das vor drei Monaten noch unmöglich war."</p>
-        <div class="signature">
-          <div class="avatar" style="background: var(--primary);">M</div>
+    <div class="how-grid">
+      <div class="principles">
+        <div class="principle">
+          <div class="marker">A</div>
           <div>
-            <div class="who">Marie, 34</div>
-            <div class="what">Spanisch · für den Umzug nach Barcelona</div>
+            <h3>Kleine Gruppen, persönliche Betreuung</h3>
+            <p>In jedem Kurs sitzen höchstens sechs Personen. So hat jede Lehrkraft Zeit, auf dich einzugehen — nicht auf den Durchschnitt.</p>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="marker">B</div>
+          <div>
+            <h3>Qualifizierte Lehrpersonen</h3>
+            <p>Muttersprachlich oder gleichwertig, mit pädagogischer Ausbildung und Erfahrung. Regelmässige Weiterbildung und Qualitätskontrollen sind bei uns Standard.</p>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="marker">C</div>
+          <div>
+            <h3>Kommunikative Methodik</h3>
+            <p>Sprechen steht im Vordergrund. Wir arbeiten mit authentischen Materialien aus dem Alltag — Zeitungen, Videos, Audio — und passen Tempo und Themen an deine Ziele an.</p>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="marker">D</div>
+          <div>
+            <h3>Effizienz und Spass</h3>
+            <p>Zielorientierter Unterricht ohne Stress, mit dem Fokus auf Spass am Lernen. Individualität und Flexibilität gehören für uns zum Konzept.</p>
           </div>
         </div>
       </div>
-      <div class="postcard reveal reveal-d1">
-        <div class="postmark">1 Jahr · DELF B2 bestanden</div>
-        <p class="quote">„Mein Lehrer Mehdi bringt mich regelmäßig zum Lachen. Ich komm aus der Stunde raus und hab das Gefühl, ich hab was Warmes gegessen — so eine Art Gemüts-Snack."</p>
-        <div class="signature">
-          <div class="avatar" style="background: var(--accent-3);">T</div>
-          <div>
-            <div class="who">Tobias, 41</div>
-            <div class="what">Französisch · B2-Zertifikat für den Job</div>
+
+      <div class="service-panel reveal reveal-d1">
+        <h3>Kostenlose Erstleistungen</h3>
+        <div class="panel-sub">Damit du uns in Ruhe kennenlernen kannst.</div>
+        <ul class="service-list">
+          <li>
+            <div class="check">1</div>
+            <div>
+              <strong>Beratung</strong>
+              <span>Unverbindliche Beratung zur Kurswahl.</span>
+            </div>
+          </li>
+          <li>
+            <div class="check">2</div>
+            <div>
+              <strong>Einstufungstest</strong>
+              <span>Kostenlos, online oder persönlich — damit wir dein genaues Niveau kennen.</span>
+            </div>
+          </li>
+          <li>
+            <div class="check">3</div>
+            <div>
+              <strong>Probelektion</strong>
+              <span>Kostenlose, unverbindliche Schnupperlektion bei deiner zukünftigen Lehrperson.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABLAUF ===== -->
+<section class="ablauf" id="ablauf">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Anmeldung &amp; Ablauf</span>
+      <h2>In fünf Schritten<br/>zur <em>ersten Lektion.</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>Kontakt</h3>
+        <p>Telefon, E-Mail oder Online-Formular — ganz wie du willst.</p>
+      </div>
+      <div class="step reveal reveal-d1">
+        <div class="step-num">2</div>
+        <h3>Einstufung</h3>
+        <p>Kurzer Test oder ein Gespräch zur Niveaubestimmung.</p>
+      </div>
+      <div class="step reveal reveal-d2">
+        <div class="step-num">3</div>
+        <h3>Probelektion</h3>
+        <p>Kostenlos und unverbindlich bei deiner zukünftigen Lehrperson.</p>
+      </div>
+      <div class="step reveal reveal-d3">
+        <div class="step-num">4</div>
+        <h3>Start</h3>
+        <p>Bei Gefallen sofortiger Beginn im laufenden Kurs oder Start des individuellen Unterrichts.</p>
+      </div>
+      <div class="step reveal reveal-d4">
+        <div class="step-num">5</div>
+        <h3>Flexibilität</h3>
+        <p>Kurswechsel oder Anpassung des Pensums ist während der Laufzeit jederzeit möglich.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STANDORTE ===== -->
+<section class="locations-section" id="locations">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Standorte &amp; Kontakt</span>
+      <h2>Wo du uns <em>findest.</em></h2>
+      <p>Zwei Standorte in der Deutschschweiz. Beratung und Einstufung nach Vereinbarung.</p>
+    </div>
+    <div class="locations-grid">
+      <div class="location-card reveal">
+        <div class="stamp">Büro & Kursräume</div>
+        <h3>Schaffhausen</h3>
+        <div class="location-info">
+          <strong>Adresse</strong>
+          Vorstadt 18, 1. Stock<br/>
+          8200 Schaffhausen
+          <strong>Telefon</strong>
+          <a href="tel:+41526204438">052 620 44 38</a>
+          <strong>E-Mail</strong>
+          <a href="mailto:sprachkurse@linguasud.com">sprachkurse@linguasud.com</a>
+          <strong>Öffnungszeiten</strong>
+          <div class="opening-hours">
+            <div class="opening-hours-row">
+              <span class="day">Mo–Fr</span>
+              <span>08.00–12.00 Uhr</span>
+            </div>
+            <div class="opening-hours-row">
+              <span class="day"></span>
+              <span>13.00–17.00 Uhr</span>
+            </div>
+            <div class="opening-hours-note">Termine auch abends oder samstags nach Absprache.</div>
           </div>
         </div>
       </div>
-      <div class="postcard reveal reveal-d2">
-        <div class="postmark">6 Monate · erste Konversation</div>
-        <p class="quote">„Letzten Sonntag hab ich zum ersten Mal einen Traum auf Italienisch gehabt. Ich bin schweißgebadet aufgewacht — aber vor Freude. Das ist der Moment, für den ich lerne."</p>
-        <div class="signature">
-          <div class="avatar" style="background: var(--accent-2);">R</div>
-          <div>
-            <div class="who">Rana, 28</div>
-            <div class="what">Italienisch · A2 → B1 unterwegs</div>
-          </div>
+
+      <div class="location-card reveal reveal-d1">
+        <div class="stamp">NUR Kursräume</div>
+        <h3>Winterthur</h3>
+        <div class="location-info">
+          <strong>Adresse</strong>
+          Bahnhofplatz 9<br/>
+          8400 Winterthur
+          <strong>Beratung</strong>
+          <span class="red">Nur nach Terminvereinbarung.</span>
+          <strong>Telefon</strong>
+          <a href="tel:+41526204438">052 620 44 38</a>
+          <strong>E-Mail</strong>
+          <a href="mailto:sprachkurse@linguasud.com">sprachkurse@linguasud.com</a>
         </div>
       </div>
     </div>
@@ -1267,11 +1331,11 @@
 <section class="cta-section" id="contact">
   <div class="container">
     <div class="cta-box reveal">
-      <div class="stamp">erste stunde gratis</div>
-      <h2>Dein erstes Wort<br/>ist nur eine Stunde <em>entfernt.</em></h2>
-      <p>30 Minuten, eine echte Lehrkraft, ein klares Ziel. Kein Vertrag, keine Vorauswahl, keine Vokabelliste. Schreib uns einfach, welche Sprache dich ruft — wir antworten meistens innerhalb eines Werktags.</p>
-      <a href="mailto:hallo@parole.schule" class="btn btn-primary">Probestunde anfragen <span class="arrow">→</span></a>
-      <div class="cta-meta">oder ruf uns an: +49 30 12 34 56 78 · Mo–Fr 9–18 Uhr</div>
+      <div class="stamp">erste Lektion gratis</div>
+      <h2>Beratung, Einstufung und Probelektion<br/>sind <em>kostenlos.</em></h2>
+      <p>Du lernst uns in Ruhe kennen, bevor du dich entscheidest. Ganz ohne Vertrag und ohne Druck. Schreib uns oder ruf uns an — wir melden uns innerhalb eines Werktags.</p>
+      <a href="mailto:sprachkurse@linguasud.com" class="btn btn-primary">Probelektion anfragen <span class="arrow">→</span></a>
+      <div class="cta-meta">oder ruf uns an: <a href="tel:+41526204438">052 620 44 38</a> · Mo–Fr zu Bürozeiten</div>
     </div>
   </div>
 </section>
@@ -1281,47 +1345,43 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="logo">parole<span class="dot"></span></div>
-        <p>Eine kleine Sprachschule in Berlin, Wien und Zürich. Wir glauben, dass Sprachenlernen das Leben leichter, lustiger und ein bisschen weiter macht.</p>
+        <div class="logo">linguasud<span class="since">seit 2003</span></div>
+        <p>Die grösste private Sprachschule zwischen Schaffhausen und Winterthur. Gegründet 2003 von Bernadette Hübscher. Über 25 Sprachen, kleine Gruppen, persönliche Betreuung.</p>
       </div>
       <div class="footer-col">
         <h4>Sprachen</h4>
         <ul>
-          <li><a href="#moments">🇪🇸 Spanisch</a></li>
-          <li><a href="#moments">🇫🇷 Französisch</a></li>
-          <li><a href="#moments">🇮🇹 Italienisch</a></li>
-          <li><a href="#moments">🇬🇧 Englisch</a></li>
-          <li><a href="#moments">+ 8 weitere</a></li>
+          <li><a href="#languages">🇩🇪 Deutsch</a></li>
+          <li><a href="#languages">🇬🇧 Englisch</a></li>
+          <li><a href="#languages">🇫🇷 Französisch</a></li>
+          <li><a href="#languages">🇮🇹 Italienisch</a></li>
+          <li><a href="#languages">🇪🇸 Spanisch</a></li>
+          <li><a href="#contact">+ 20 weitere</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Schule</h4>
+        <h4>Unterricht</h4>
         <ul>
-          <li><a href="#how">So läuft's</a></li>
-          <li><a href="#formats">Formate</a></li>
-          <li><a href="#voices">Stimmen</a></li>
-          <li><a href="#">Lehrkräfte</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="#formats">Gruppenkurse</a></li>
+          <li><a href="#formats">Einzel &amp; Partner</a></li>
+          <li><a href="#formats">Online</a></li>
+          <li><a href="#formats">Firmenkurse</a></li>
+          <li><a href="#how">Qualität</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Kontakt</h4>
         <ul>
-          <li><a href="mailto:hallo@parole.schule">hallo@parole.schule</a></li>
-          <li><a href="tel:+49301234567">+49 30 12 34 56 78</a></li>
-          <li><a href="#">Berlin · Wien · Zürich</a></li>
-          <li><a href="#">Impressum</a></li>
+          <li><a href="tel:+41526204438">052 620 44 38</a></li>
+          <li><a href="mailto:sprachkurse@linguasud.com">sprachkurse@linguasud.com</a></li>
+          <li><a href="#locations">Schaffhausen</a></li>
+          <li><a href="#locations">Winterthur</a></li>
+
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Parole GmbH · gemacht mit <span class="heart">♥</span> &amp; echtem Kaffee in Berlin.</span>
-      <div class="socials" aria-label="Social Media">
-        <a href="#" aria-label="Instagram">ig</a>
-        <a href="#" aria-label="Spotify">♪</a>
-        <a href="#" aria-label="LinkedIn">in</a>
-        <a href="#" aria-label="Newsletter">@</a>
-      </div>
+      <span>© 2026 Linguasud · gegründet 2003 von Bernadette Hübscher · in der Schweiz.</span>
     </div>
   </div>
 </footer>
